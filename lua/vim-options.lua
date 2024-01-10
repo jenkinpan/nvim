@@ -24,7 +24,7 @@ vim.api.nvim_set_keymap('t', '<C-v>', '<C-R>+', { noremap = true, silent = true 
 vim.api.nvim_set_keymap('v', '<C-v>', '<C-R>+', { noremap = true, silent = true })
 
 -- Navigate vim panes better
-vim.api.nvim_set_keymap('n', '<c-k>', ':wincmd k<CR>')
-vim.api.nvim_set_keymap('n', '<c-j>', ':wincmd j<CR>')
-vim.api.nvim_set_keymap('n', '<c-h>', ':wincmd h<CR>')
-vim.api.nvim_set_keymap('n', '<c-l>', ':wincmd l<CR>')
+vim.api.nvim_set_keymap('n', '<c-k>', ':wincmd k<CR>',{noremap = true, silent = false})
+vim.api.nvim_set_keymap('n', '<c-j>', ':wincmd j<CR>',{noremap = true, silent = false})
+vim.api.nvim_set_keymap('n', '<c-h>', ':wincmd h<CR>',{noremap = true, silent = false})
+vim.api.nvim_set_keymap('n', '<c-l>', ':wincmd l<CR>',{noremap = true, silent = false})
