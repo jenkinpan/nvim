@@ -303,6 +303,6 @@ return {
 		})
 
 		vim.keymap.set("n", "<C-n>", ":Neotree toggle <CR>", {})
-		vim.keymap.set("n", "<C-g>", ":Neotree git_status <CR>", {})
+		vim.keymap.set("n", "<C-g>", ":Neotree toggle git_status <CR>", {})
 	end,
 }
