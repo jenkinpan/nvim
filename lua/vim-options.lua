@@ -17,21 +17,23 @@ if vim.g.neovide then
 	vim.keymap.set('i', '<C-v>', '<ESC>l"+Pli') -- Paste insert mode
 end
 
+local map = vim.api.nvim_set_keymap 
+
 -- Allow clipboard copy paste in neovim
-vim.api.nvim_set_keymap('', '<C-v>', '+p<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('!', '<C-v>', '<C-R>+', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('t', '<C-v>', '<C-R>+', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '<C-v>', '<C-R>+', { noremap = true, silent = true })
+map('', '<C-v>', '+p<CR>', { noremap = true, silent = true })
+map('!', '<C-v>', '<C-R>+', { noremap = true, silent = true })
+map('t', '<C-v>', '<C-R>+', { noremap = true, silent = true })
+map('v', '<C-v>', '<C-R>+', { noremap = true, silent = true })
 
 -- Navigate vim panes better
-vim.api.nvim_set_keymap('n', '<c-k>', ':wincmd k<CR>', { noremap = true, silent = false })
-vim.api.nvim_set_keymap('n', '<c-j>', ':wincmd j<CR>', { noremap = true, silent = false })
-vim.api.nvim_set_keymap('n', '<c-h>', ':wincmd h<CR>', { noremap = true, silent = false })
-vim.api.nvim_set_keymap('n', '<c-l>', ':wincmd l<CR>', { noremap = true, silent = false })
+map('n', '<c-k>', ':wincmd k<CR>', { noremap = true, silent = false })
+map('n', '<c-j>', ':wincmd j<CR>', { noremap = true, silent = false })
+map('n', '<c-h>', ':wincmd h<CR>', { noremap = true, silent = false })
+map('n', '<c-l>', ':wincmd l<CR>', { noremap = true, silent = false })
 
 -- set shortcut for Neotree
-vim.api.nvim_set_keymap("n", "<C-n>", ":Neotree reveal <CR>", {})
-vim.api.nvim_set_keymap("n", "<C-g>", ":Neotree toggle git_status <CR>", {})
+map("n", "<C-n>", ":Neotree reveal <CR>", {})
+map("n", "<C-g>", ":Neotree toggle git_status <CR>", {})
 
 -- set shortcut for LSP
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
