@@ -7,6 +7,7 @@ vim.cmd("set softtabstop=4")
 vim.cmd("set mouse=a")
 vim.g.mapleader = " "
 
+-- Only in neovide, the below keymaps work
 if vim.g.neovide then
 	vim.keymap.set('n', '<C-s>', ':w<CR>')    -- Save
 	vim.keymap.set('v', '<C-c>', '"+y')       -- Copy
