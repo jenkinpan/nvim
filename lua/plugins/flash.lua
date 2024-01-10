@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-doc-name
 return {
 	"folke/flash.nvim",
 	event = "VeryLazy",
