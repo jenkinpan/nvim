@@ -8,7 +8,7 @@ use lazy.vim to manage neovim config
 |-- lazy-lock.json<br>
 |-- lua<br>
 |--|-- plugins<br>
-|--`-- vim-options.lua<br>
+|--|-- vim-options.lua<br>
 `---------------------
 
 ## Install
