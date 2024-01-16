@@ -4,10 +4,10 @@ use lazy.vim to manage neovim config
 
 ## file tree
 
-|-- init.lua
-|-- lazy-lock.json
-|-- lua
-    |-- plugins
+|-- init.lua<br>
+|-- lazy-lock.json<br>
+|-- lua<br>
+    |-- plugins<br>
     `-- vim-options.lua
 
 
