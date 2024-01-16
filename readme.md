@@ -2,6 +2,15 @@
 
 use lazy.vim to manage neovim config
 
+## file tree
+
+|-- init.lua
+|-- lazy-lock.json
+|-- lua
+    |-- plugins
+    `-- vim-options.lua
+
+
 ## Install
 
 telescope.nvim
