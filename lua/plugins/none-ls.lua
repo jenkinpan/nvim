@@ -10,6 +10,7 @@ return {
 				null_ls.builtins.formatting.rustfmt,
 				null_ls.builtins.diagnostics.eslint_d,
 				null_ls.builtins.formatting.black,
+				null_ls.builtins.completion.spell,
 			},
 		})
 	end,
