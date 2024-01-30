@@ -19,6 +19,7 @@ nvim-lspconfig<br>
 mason<br>
 lsp<br>
 formatter<br>
+Noice.nvim
 
 ## Key binding
 
