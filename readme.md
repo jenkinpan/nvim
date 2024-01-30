@@ -39,4 +39,4 @@ formatter
 - request treesitter with(vim, regex, lua, bash, markdown, markdown_inline)
 
 #### key bind
-**/<leader>/ds** to dimiss all visible messages
+**&lt;leader&gt;ds** to dimiss all visible messages
