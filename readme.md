@@ -5,7 +5,6 @@ use lazy.vim to manage neovim config
 ## file tree
 
 |-- init.lua<br>
-|-- lazy-lock.json<br>
 |-- lua<br>
 |--|-- plugins<br>
 |--|-- vim-options.lua<br>
@@ -40,4 +39,4 @@ formatter
 - request treesitter with(vim, regex, lua, bash, markdown, markdown_inline)
 
 #### key bind
-**<leader>ds** to dimiss all visible messages
+**/<leader>/ds** to dimiss all visible messages
