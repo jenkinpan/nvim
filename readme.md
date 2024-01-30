@@ -12,13 +12,13 @@ use lazy.vim to manage neovim config
 
 ## Install
 
-telescope.nvim
-neo-tree
-tree-sitter
-nvim-lspconfig
-mason
-lsp
-formatter
+telescope.nvim<br>
+neo-tree<br>
+tree-sitter<br>
+nvim-lspconfig<br>
+mason<br>
+lsp<br>
+formatter<br>
 
 ## Key binding
 
