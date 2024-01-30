@@ -23,13 +23,9 @@ Noice.nvim
 
 ## Key binding
 
-### Neo-Tree short key
-
+- **&lt;leader&gt;n to cancel search result highlight for /
 - Ctrl + n to open Neo-Tree
 - Ctrl + g to open Neo-Tree git_status floating window
-
-### window jumping short key
-
 - Ctrl + h to jump to the left split window
 - Ctrl + l to jump to the right split window
 - Ctrl + j to jump to the bottom split window
