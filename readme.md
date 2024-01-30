@@ -34,3 +34,10 @@ formatter
 - Ctrl + l to jump to the right split window
 - Ctrl + j to jump to the bottom split window
 - Ctrl + k to jump to the upper split window
+
+### Noice.Nvim
+
+- request treesitter with(vim, regex, lua, bash, markdown, markdown_inline)
+
+#### key bind
+    **<leader>ds** to dimiss all visible messages
