@@ -11,14 +11,15 @@ cmd("set softtabstop=4")
 cmd("set mouse=a")
 vim.g.mapleader = " "
 
+-- KeyBind
 -- Only in neovide, the below keymaps work
 -- require neovide
 if vim.g.neovide then
-	map("n", "<C-s>", ":w<CR>")   -- Save
-	map("v", "<C-c>", '"+y')      -- Copy
-	map("n", "<C-v>", '"+P')      -- Paste normal mode
-	map("v", "<C-v>", '"+P')      -- Paste visual mode
-	map("c", "<C-v>", "<C-R>+")   -- Paste command mode
+	map("n", "<C-s>", ":w<CR>") -- Save
+	map("v", "<C-c>", '"+y') -- Copy
+	map("n", "<C-v>", '"+P') -- Paste normal mode
+	map("v", "<C-v>", '"+P') -- Paste visual mode
+	map("c", "<C-v>", "<C-R>+") -- Paste command mode
 	map("i", "<C-v>", '<ESC>l"+Pli') -- Paste insert mode
 end
 
@@ -50,7 +51,6 @@ map("n", "<leader>ca", vim.lsp.buf.code_action, {})
 map("n", "<leader>gf", vim.lsp.buf.format, {})
 
 -- set dismiss noice message
--- 忽略所有的显示的noice信息
 map("n", "<leader>ds", ":NoiceDismiss <CR>", { noremap = true, silent = true })
 
 -- set get preview code with gitsigns
