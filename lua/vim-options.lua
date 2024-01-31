@@ -55,3 +55,13 @@ map("n", "<leader>ds", ":NoiceDismiss <CR>", { noremap = true, silent = true })
 
 -- set get preview code with gitsigns
 map("n", "<leader>gp", ":Gitsigns preview_hunk <CR>", { noremap = true, silent = true })
+
+-- set telescope key bind
+map("n", "<leader>fb", ":Telescope buffers <CR>", {})
+map("n", "<leader>fh", ":Telescope help_tags <CR>", {})
+map("n", "<leader>ff", ":Telescope find_files <CR>", {})
+map("n", "<leader>fg", ":Telescope live_grep <CR>", {})
+
+-- debugging key bind
+map("n", "<leader>dt", ":DapToggleBreakpoint <CR>", { noremap = true, silent = true })
+map("n", "<leader>dc", ":Dapcontinue <CR>", { noremap = true, silent = true })
