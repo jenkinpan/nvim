@@ -14,11 +14,11 @@ vim.g.mapleader = " "
 -- Only in neovide, the below keymaps work
 -- require neovide
 if vim.g.neovide then
-	map("n", "<C-s>", ":w<CR>") -- Save
-	map("v", "<C-c>", '"+y') -- Copy
-	map("n", "<C-v>", '"+P') -- Paste normal mode
-	map("v", "<C-v>", '"+P') -- Paste visual mode
-	map("c", "<C-v>", "<C-R>+") -- Paste command mode
+	map("n", "<C-s>", ":w<CR>")   -- Save
+	map("v", "<C-c>", '"+y')      -- Copy
+	map("n", "<C-v>", '"+P')      -- Paste normal mode
+	map("v", "<C-v>", '"+P')      -- Paste visual mode
+	map("c", "<C-v>", "<C-R>+")   -- Paste command mode
 	map("i", "<C-v>", '<ESC>l"+Pli') -- Paste insert mode
 end
 
@@ -53,7 +53,5 @@ map("n", "<leader>gf", vim.lsp.buf.format, {})
 -- 忽略所有的显示的noice信息
 map("n", "<leader>ds", ":NoiceDismiss <CR>", { noremap = true, silent = true })
 
---set current line show git blame
-map("n", "<leader>gt", ":Gitsigns toggle_current_line_blame <CR>", { noremap = true, silent = true })
 -- set get preview code with gitsigns
 map("n", "<leader>gp", ":Gitsigns preview_hunk <CR>", { noremap = true, silent = true })
