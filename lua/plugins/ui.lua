@@ -1,5 +1,14 @@
 return {
 	{
+	-- set greeter UI 
+		"goolord/alpha-nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("alpha").setup(require("alpha.themes.startify").config)
+		end,
+	},
+	{
+	-- set UI for notification, cmdline and popupmenu 
 		"folke/noice.nvim",
 		event = "VeryLazy",
 		dependencies = {
@@ -30,6 +39,7 @@ return {
 					opts = { skip = true },
 				},
 				views = {
+				-- set cmdline_popup and popupmenu position
 					cmdline_popup = {
 						position = {
 							row = "50%",
@@ -66,13 +76,6 @@ return {
 					lsp_doc_border = false,
 				},
 			})
-		end,
-	},
-	{
-		"goolord/alpha-nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			require("alpha").setup(require("alpha.themes.startify").config)
 		end,
 	},
 }
