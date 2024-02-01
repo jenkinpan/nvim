@@ -57,6 +57,6 @@ Noice.nvim
 ### KeyBind for Noice
 - NORMAL mode
 
-```
+```help
 `<leader>ds` - Dsimiss all visible messages
 ```
