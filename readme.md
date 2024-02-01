@@ -21,17 +21,30 @@ lsp<br>
 formatter<br>
 Noice.nvim
 
-## Key binding
+## KeyBinding
 - NORMAL mode
 
 ```help
 `<leader>n` - cancel search result highlight
-`Ctrl+n` - open Neo-Tree
-`Ctrl+g` - open Neo-Tree git_status floating window
 `Ctrl+h` - jump to the left split window
 `Ctrl+l` - jump to the right split window
 `Ctrl+j` - jump to the bottom split window
 `Ctrl+k` - jump to the upper split window
+```
+
+### KeyBind for Neo-Tree
+- NORMAL mode
+
+```help
+`Ctrl+n` - open Neo-Tree on the left side
+`Ctrl+g` - open Neo-Tree git_status floating window
+```
+
+### KeyBind for Telescope
+- NORMAL mode
+
+```help
+
 ```
 
 ### KeyBind for Comment
