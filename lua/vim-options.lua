@@ -15,7 +15,6 @@ vim.g.mapleader = " "
 -- Only in neovide, the below keymaps work
 -- require neovide
 if vim.g.neovide then
-	map("n", "<C-s>", ":w<CR>") -- Save
 	map("v", "<C-c>", '"+y') -- Copy
 	map("n", "<C-v>", '"+P') -- Paste normal mode
 	map("v", "<C-v>", '"+P') -- Paste visual mode
