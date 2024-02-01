@@ -40,9 +40,8 @@ return {
 					},
 				},
 				popupmenu = {
-					relative = "editor",
 					position = {
-						row = "50%",
+						row = "71%",
 						col = "50%",
 					},
 					size = {
@@ -60,7 +59,7 @@ return {
 			},
 			presets = {
 				bottom_search = true,
-				command_palette = true,
+				command_palette = false,
 				long_message_to_split = true,
 				inc_rename = false,
 				lsp_doc_border = false,
