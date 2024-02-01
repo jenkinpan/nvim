@@ -47,13 +47,13 @@ Noice.nvim
 `gco` - Insert comment to the next line and enters INSERT mode
 `gcO` - Insert comment to the previous line and enters INSERT mode
 `gcA` - Insert comment to end of the current line and enters INSERT mode
-
+```
 - VISUAL mode
 
 ```help
 `gc` - Toggles the region using linewise comment
 `gb` - Toggles the region using blockwise comment
-
+```
 ### Noice.Nvim
 
 - request treesitter with(vim, regex, lua, bash, markdown, markdown_inline)
