@@ -23,7 +23,7 @@ Noice.nvim
 
 ## Key binding
 
-- **&lt;leader&gt;n to cancel search result highlight for /
+- **&lt;leader&gt;**n to cancel search result highlight for /
 - Ctrl + n to open Neo-Tree
 - Ctrl + g to open Neo-Tree git_status floating window
 - Ctrl + h to jump to the left split window
@@ -54,9 +54,9 @@ Noice.nvim
 `gc` - Toggles the region using linewise comment
 `gb` - Toggles the region using blockwise comment
 ```
-### Noice.Nvim
+### KeyBind for Noice
+- NORMAL mode
 
-- request treesitter with(vim, regex, lua, bash, markdown, markdown_inline)
-
-#### key bind
+```
 **&lt;leader&gt;ds** to dimiss all visible messages
+```
