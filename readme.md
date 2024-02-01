@@ -1,6 +1,6 @@
 # neovim config profile
 
-use lazy.vim to manage neovim config
+use Lazy.nvim to manage plugins
 
 ## file tree
 
@@ -22,14 +22,17 @@ formatter<br>
 Noice.nvim
 
 ## Key binding
+- NORMAL mode
 
-- **&lt;leader&gt;**n to cancel search result highlight for /
-- Ctrl + n to open Neo-Tree
-- Ctrl + g to open Neo-Tree git_status floating window
-- Ctrl + h to jump to the left split window
-- Ctrl + l to jump to the right split window
-- Ctrl + j to jump to the bottom split window
-- Ctrl + k to jump to the upper split window
+```help
+`<leader>n` to cancel search result highlight for /
+`Ctrl + n` to open Neo-Tree
+`Ctrl + g` to open Neo-Tree git_status floating window
+`Ctrl + h` to jump to the left split window
+`Ctrl + l` to jump to the right split window
+`Ctrl + j` to jump to the bottom split window
+`Ctrl + k` to jump to the upper split window
+```
 
 ### KeyBind for Comment
 - NORMAL mode
