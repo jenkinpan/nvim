@@ -2,15 +2,15 @@ local map = vim.keymap.set
 local cmd = vim.cmd
 local opts = { noremap = true, silent = true }
 
-cmd("set number")
-cmd("set relativenumber")
+cmd("set number")  -- set line number
+cmd("set relativenumber")  -- set relative line number
 cmd("set autoindent")
 cmd("set tabstop=4")
 cmd("set shiftwidth=4")
 cmd("set smarttab")
 cmd("set softtabstop=4")
-cmd("set mouse=a")
-vim.g.mapleader = " "
+cmd("set mouse=a")	-- allow mouse action
+vim.g.mapleader = " "  -- set space as leader key
 
 -- KeyBind
 -- Only in neovide, the below keymaps work
