@@ -59,8 +59,8 @@ map("n", "<leader>gp", ":Gitsigns preview_hunk <CR>", opts)
 -- set telescope key bind
 map("n", "<leader>fb", ":Telescope buffers <CR>", {})
 map("n", "<leader>fh", ":Telescope help_tags <CR>", {})
-map("n", "<leader>ff", ":Telescope find_files <CR>", {})
-map("n", "<leader>fg", ":Telescope live_grep <CR>", {})
+map("n", "<leader>ff", ":Telescope find_files <CR>", opts)
+map("n", "<leader>fg", ":Telescope live_grep <CR>", opts)
 
 -- debugging key bind
 map("n", "<leader>dt", ":DapToggleBreakpoint <CR>", opts)
