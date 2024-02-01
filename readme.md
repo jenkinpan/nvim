@@ -58,5 +58,5 @@ Noice.nvim
 - NORMAL mode
 
 ```
-**&lt;leader&gt;ds** to dimiss all visible messages
+`<leader>ds` - Dsimiss all visible messages
 ```
