@@ -1,8 +1,9 @@
---local map = vim.api.nvim_set_keymap
 local map = vim.keymap.set
 local cmd = vim.cmd
+local opts = { noremap = true, silent = true }
 
 cmd("set number")
+cmd("set relativenumber")
 cmd("set autoindent")
 cmd("set tabstop=4")
 cmd("set shiftwidth=4")
@@ -29,17 +30,17 @@ map("t", "<C-v>", "<C-R>+", { noremap = true, silent = true })
 map("v", "<C-v>", "<C-R>+", { noremap = true, silent = true })
 
 -- cancel hightlight search result for /
-map("n", "<leader>n", ":noh <CR>", { noremap = true, silent = true })
+map("n", "<leader>n", ":noh <CR>", opts)
 
 -- Navigate vim panes better
-map("n", "<c-k>", ":wincmd k<CR>", { noremap = true, silent = true })
-map("n", "<c-j>", ":wincmd j<CR>", { noremap = true, silent = true })
-map("n", "<c-h>", ":wincmd h<CR>", { noremap = true, silent = true })
-map("n", "<c-l>", ":wincmd l<CR>", { noremap = true, silent = true })
+map("n", "<c-k>", ":wincmd k<CR>", opts)
+map("n", "<c-j>", ":wincmd j<CR>", opts)
+map("n", "<c-h>", ":wincmd h<CR>", opts)
+map("n", "<c-l>", ":wincmd l<CR>", opts)
 
 -- set shortcut for Neotree
-map("n", "<C-n>", ":Neotree reveal <CR>", { noremap = true, silent = true })
-map("n", "<C-g>", ":Neotree toggle git_status <CR>", { noremap = true, silent = true })
+map("n", "<C-n>", ":Neotree reveal <CR>", opts)
+map("n", "<C-g>", ":Neotree toggle git_status <CR>", opts)
 
 -- set shortcut for LSP
 map("n", "K", vim.lsp.buf.hover, {})
@@ -50,10 +51,10 @@ map("n", "<leader>ca", vim.lsp.buf.code_action, {})
 map("n", "<leader>gf", vim.lsp.buf.format, {})
 
 -- set dismiss noice message
-map("n", "<leader>ds", ":NoiceDismiss <CR>", { noremap = true, silent = true })
+map("n", "<leader>ds", ":NoiceDismiss <CR>", opts)
 
 -- set get preview code with gitsigns
-map("n", "<leader>gp", ":Gitsigns preview_hunk <CR>", { noremap = true, silent = true })
+map("n", "<leader>gp", ":Gitsigns preview_hunk <CR>", opts)
 
 -- set telescope key bind
 map("n", "<leader>fb", ":Telescope buffers <CR>", {})
@@ -62,5 +63,5 @@ map("n", "<leader>ff", ":Telescope find_files <CR>", {})
 map("n", "<leader>fg", ":Telescope live_grep <CR>", {})
 
 -- debugging key bind
-map("n", "<leader>dt", ":DapToggleBreakpoint <CR>", { noremap = true, silent = true })
-map("n", "<leader>dc", ":Dapcontinue <CR>", { noremap = true, silent = true })
+map("n", "<leader>dt", ":DapToggleBreakpoint <CR>", opts)
+map("n", "<leader>dc", ":Dapcontinue <CR>", opts)
