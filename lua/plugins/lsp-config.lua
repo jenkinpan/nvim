@@ -30,6 +30,14 @@ return {
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
+				settings = {
+					Lua = {
+						-- make the language server recognize "vim" global
+						diagnostics = {
+							globals = { "vim" },
+						},
+					},
+				},
 			})
 
 			lspconfig.tsserver.setup({

@@ -1,6 +1,17 @@
 return {
 	{
-	-- set greeter UI 
+		-- set UI lualine
+		"nvim-lualine/lualine.nvim",
+		config = function()
+			require("lualine").setup({
+				options = {
+					theme = "dracula",
+				},
+			})
+		end,
+	},
+	{
+		-- set greeter UI
 		"goolord/alpha-nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
@@ -8,7 +19,35 @@ return {
 		end,
 	},
 	{
-	-- set UI for notification, cmdline and popupmenu 
+		-- set UI for blankline
+		"lukas-reineke/indent-blankline.nvim",
+		event = "VeryLazy",
+		opts = {
+			indent = {
+				char = "┊",
+				tab_char = "┊",
+			},
+			scope = { enabled = false },
+			exclude = {
+				filetypes = {
+					"help",
+					"alpha",
+					"dashboard",
+					"neo-tree",
+					"Trouble",
+					"trouble",
+					"lazy",
+					"mason",
+					"notify",
+					"toggleterm",
+					"lazyterm",
+				},
+			},
+		},
+		main = "ibl",
+	},
+	{
+		-- set UI for notification, cmdline and popupmenu
 		"folke/noice.nvim",
 		event = "VeryLazy",
 		dependencies = {
@@ -39,7 +78,7 @@ return {
 					opts = { skip = true },
 				},
 				views = {
-				-- set cmdline_popup and popupmenu position
+					-- set cmdline_popup and popupmenu position
 					cmdline_popup = {
 						position = {
 							row = "50%",
