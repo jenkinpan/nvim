@@ -2,14 +2,14 @@ local map = vim.keymap.set
 local cmd = vim.cmd
 local opts = { noremap = true, silent = true }
 
-cmd("set number")         -- set line number
+cmd("set number") -- set line number
 cmd("set relativenumber") -- set relative line number
 cmd("set autoindent")
 cmd("set tabstop=4")
 cmd("set shiftwidth=4")
 cmd("set smarttab")
 cmd("set softtabstop=4")
-cmd("set mouse=a")    -- allow mouse action
+cmd("set mouse=a") -- allow mouse action
 cmd("set mousemoveevent") -- set mouse move detection for bufferline hover show close icon
 vim.g.mapleader = " " -- set space as leader key
 
@@ -17,10 +17,10 @@ vim.g.mapleader = " " -- set space as leader key
 -- Only in neovide, the below keymaps work
 -- require neovide
 if vim.g.neovide then
-	map("v", "<C-c>", '"+y')      -- Copy
-	map("n", "<C-v>", '"+P')      -- Paste normal mode
-	map("v", "<C-v>", '"+P')      -- Paste visual mode
-	map("c", "<C-v>", "<C-R>+")   -- Paste command mode
+	map("v", "<C-c>", '"+y') -- Copy
+	map("n", "<C-v>", '"+P') -- Paste normal mode
+	map("v", "<C-v>", '"+P') -- Paste visual mode
+	map("c", "<C-v>", "<C-R>+") -- Paste command mode
 	map("i", "<C-v>", '<ESC>l"+Pli') -- Paste insert mode
 end
 
@@ -38,6 +38,11 @@ map("n", "<leader>n", ":noh <CR>", opts)
 map("n", "<leader>b", ":BufferLinePick <CR>", opts)
 -- set to close a specific buffer
 map("n", "<leader>cb", ":BufferLinePickClose <CR>", opts)
+-- set to close other buffers
+map("n", "<leader>co", ":BufferLineCloseOthers <CR>", opts)
+
+-- set choose buffer by cycle next
+map("n", "<c-tab>", ":BufferLineCycleNext <CR>", opts)
 
 -- set choose buffer by number
 map("n", "<c-1>", ":BufferLineGoToBuffer 1 <CR>", opts)
@@ -49,7 +54,6 @@ map("n", "<c-6>", ":BufferLineGoToBuffer 6 <CR>", opts)
 map("n", "<c-7>", ":BufferLineGoToBuffer 7 <CR>", opts)
 map("n", "<c-8>", ":BufferLineGoToBuffer 8 <CR>", opts)
 map("n", "<c-9>", ":BufferLineGoToBuffer 9 <CR>", opts)
-
 
 -- Navigate vim panes better
 map("n", "<c-k>", ":wincmd k<CR>", opts)
