@@ -2,35 +2,54 @@ local map = vim.keymap.set
 local cmd = vim.cmd
 local opts = { noremap = true, silent = true }
 
-cmd("set number")  -- set line number
-cmd("set relativenumber")  -- set relative line number
+cmd("set number")         -- set line number
+cmd("set relativenumber") -- set relative line number
 cmd("set autoindent")
 cmd("set tabstop=4")
 cmd("set shiftwidth=4")
 cmd("set smarttab")
 cmd("set softtabstop=4")
-cmd("set mouse=a")	-- allow mouse action
-vim.g.mapleader = " "  -- set space as leader key
+cmd("set mouse=a")    -- allow mouse action
+cmd("set mousemoveevent") -- set mouse move detection for bufferline hover show close icon
+vim.g.mapleader = " " -- set space as leader key
 
 -- KeyBind
 -- Only in neovide, the below keymaps work
 -- require neovide
 if vim.g.neovide then
-	map("v", "<C-c>", '"+y') -- Copy
-	map("n", "<C-v>", '"+P') -- Paste normal mode
-	map("v", "<C-v>", '"+P') -- Paste visual mode
-	map("c", "<C-v>", "<C-R>+") -- Paste command mode
+	map("v", "<C-c>", '"+y')      -- Copy
+	map("n", "<C-v>", '"+P')      -- Paste normal mode
+	map("v", "<C-v>", '"+P')      -- Paste visual mode
+	map("c", "<C-v>", "<C-R>+")   -- Paste command mode
 	map("i", "<C-v>", '<ESC>l"+Pli') -- Paste insert mode
 end
 
 -- Allow clipboard copy paste in neovim
-map("", "<C-v>", "+p<CR>", { noremap = true, silent = true })
-map("!", "<C-v>", "<C-R>+", { noremap = true, silent = true })
-map("t", "<C-v>", "<C-R>+", { noremap = true, silent = true })
-map("v", "<C-v>", "<C-R>+", { noremap = true, silent = true })
+map("", "<C-v>", "+p<CR>", opts)
+map("!", "<C-v>", "<C-R>+", opts)
+map("t", "<C-v>", "<C-R>+", opts)
+map("v", "<C-v>", "<C-R>+", opts)
 
 -- cancel hightlight search result for /
 map("n", "<leader>n", ":noh <CR>", opts)
+
+-- set KeyBind for BufferLine
+-- set to go a specific buffer
+map("n", "<leader>b", ":BufferLinePick <CR>", opts)
+-- set to close a specific buffer
+map("n", "<leader>cb", ":BufferLinePickClose <CR>", opts)
+
+-- set choose buffer by number
+map("n", "<c-1>", ":BufferLineGoToBuffer 1 <CR>", opts)
+map("n", "<c-2>", ":BufferLineGoToBuffer 2 <CR>", opts)
+map("n", "<c-3>", ":BufferLineGoToBuffer 3 <CR>", opts)
+map("n", "<c-4>", ":BufferLineGoToBuffer 4 <CR>", opts)
+map("n", "<c-5>", ":BufferLineGoToBuffer 5 <CR>", opts)
+map("n", "<c-6>", ":BufferLineGoToBuffer 6 <CR>", opts)
+map("n", "<c-7>", ":BufferLineGoToBuffer 7 <CR>", opts)
+map("n", "<c-8>", ":BufferLineGoToBuffer 8 <CR>", opts)
+map("n", "<c-9>", ":BufferLineGoToBuffer 9 <CR>", opts)
+
 
 -- Navigate vim panes better
 map("n", "<c-k>", ":wincmd k<CR>", opts)

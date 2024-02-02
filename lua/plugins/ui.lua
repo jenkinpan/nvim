@@ -1,6 +1,6 @@
 return {
 	{
-		-- set UI lualine
+		-- set UI: lualine(or call it status line)
 		"nvim-lualine/lualine.nvim",
 		config = function()
 			require("lualine").setup({
@@ -11,7 +11,7 @@ return {
 		end,
 	},
 	{
-		-- set greeter UI
+		-- set UI: greeter interface
 		"goolord/alpha-nvim",
 		event = "VimEnter",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -20,7 +20,7 @@ return {
 		end,
 	},
 	{
-		-- set UI for blankline
+		-- set UI: blankline
 		"lukas-reineke/indent-blankline.nvim",
 		event = "VeryLazy",
 		opts = {
@@ -48,6 +48,48 @@ return {
 		main = "ibl",
 	},
 	{
+		-- set UI: Buffer
+		"akinsho/bufferline.nvim",
+		after = "catppuccin",
+		version = "*",
+		dependencies = "nvi5-tree/nvim-web-devicons",
+		config = function()
+			vim.opt.termguicolors = true
+			require("bufferline").setup({
+				-- set catppuccin theme for bufferline
+				highlights = require("catppuccin.groups.integrations.bufferline").get(),
+
+				options = {
+					indicator = {
+						icon = "▎", -- this should be omitted if indicator style is not 'icon'
+						style = "icon",
+					},
+					diagnostics = "nvim_lsp",
+
+					diagnostics_indicator = function(count, level)
+						local icon = level:match("error") and " " or ""
+						return " " .. icon .. count
+					end,
+
+					offsets = {
+						{
+							filetype = "neo-tree",
+							text = "File Explorer",
+							text_align = "center",
+							separator = true,
+						},
+					},
+					show_close_icon = false,
+					hover = {
+						enabled = true,
+						delay = 200,
+						reveal = { "close" },
+					},
+				},
+			})
+		end,
+	},
+	{
 		-- set UI for notification, cmdline and popupmenu
 		"folke/noice.nvim",
 		event = "VeryLazy",
@@ -56,7 +98,6 @@ return {
 			"rcarriga/nvim-notify",
 			"hrsh7th/nvim-cmp",
 		},
-
 		config = function()
 			require("noice").setup({
 				lsp = {
@@ -72,7 +113,6 @@ return {
 							view = "notify",
 							filter = { event = "msg_showmode" },
 						},
-
 						event = "notify",
 						fidn = "No information available",
 					},
