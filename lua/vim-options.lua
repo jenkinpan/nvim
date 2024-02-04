@@ -33,6 +33,9 @@ map("v", "<C-v>", "<C-R>+", opts)
 -- cancel hightlight search result for /
 map("n", "<leader>n", ":noh <CR>", opts)
 
+-- set keybind of folds
+
+
 -- set KeyBind for BufferLine
 -- set to go a specific buffer
 map("n", "<leader>b", ":BufferLinePick <CR>", opts)
