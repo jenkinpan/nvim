@@ -38,12 +38,9 @@ map("n", "<leader>fc", ":foldclose <CR>", opts) -- close a fold
 map("n", "<leader>fo", ":foldopen <CR>", opts) -- open a fold
 
 -- set KeyBind for BufferLine
--- set to go a specific buffer
-map("n", "<leader>b", ":BufferLinePick <CR>", opts)
--- set to close a specific buffer
-map("n", "<leader>cb", ":BufferLinePickClose <CR>", opts)
--- set to close other buffers
-map("n", "<leader>co", ":BufferLineCloseOthers <CR>", opts)
+map("n", "<leader>b", ":BufferLinePick <CR>", opts) -- go to a specific buffer
+map("n", "<leader>cb", ":BufferLinePickClose <CR>", opts) -- close a specific buffer
+map("n", "<leader>co", ":BufferLineCloseOthers <CR>", opts) -- close other buffers
 
 -- set choose buffer by cycle next
 map("n", "<c-tab>", ":BufferLineCycleNext <CR>", opts)
