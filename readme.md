@@ -22,6 +22,7 @@ formatter<br>
 Noice.nvim
 
 ## KeyBinding
+
 - NORMAL mode
 
 ```help
@@ -33,6 +34,7 @@ Noice.nvim
 ```
 
 ### KeyBind for Neo-Tree
+
 - NORMAL mode
 
 ```help
@@ -41,15 +43,17 @@ Noice.nvim
 ```
 
 ### KeyBind for Telescope
+
 - NORMAL mode
 
 ```help
-`<leader>ff` - open file find 
+`<leader>ff` - open file find
 `<leader>fg` - open live grep window
 `<leader>fb` - open find buffer window for current buffer(but I've already use bufferline as a plugin for buffer UI)
 ```
 
 ### KeyBind for Comment
+
 - NORMAL mode
 
 ```help
@@ -66,13 +70,16 @@ Noice.nvim
 `gcO` - Insert comment to the previous line and enters INSERT mode
 `gcA` - Insert comment to end of the current line and enters INSERT mode
 ```
+
 - VISUAL mode
 
 ```help
 `gc` - Toggles the region using linewise comment
 `gb` - Toggles the region using blockwise comment
 ```
+
 ### KeyBind for Noice
+
 - NORMAL mode
 
 ```help
