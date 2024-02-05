@@ -12,8 +12,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- 导入vim相关设置
+-- import vim setting and keybindings
 require("vim-options")
 
--- 导入插件设置，文件位置在lua/plugins/*.lua
+-- import plugins, and the file location is `nvim/lua/plugins`
 require("lazy").setup("plugins")

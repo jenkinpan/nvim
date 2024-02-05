@@ -1,6 +1,6 @@
 # neovim config profile
 
-use Lazy.nvim to manage plugins
+use Lazy to manage plugins
 
 ## file tree
 
@@ -10,16 +10,16 @@ use Lazy.nvim to manage plugins
 |--|-- vim-options.lua<br>
 `---------------------
 
-## Install
+## Installed Plugins
 
 telescope.nvim<br>
 neo-tree<br>
 tree-sitter<br>
 nvim-lspconfig<br>
 mason<br>
-lsp<br>
-formatter<br>
-Noice.nvim
+null-ls<br>
+noice.nvim<br>
+nvim-ufo
 
 ## KeyBinding
 
@@ -49,7 +49,7 @@ Noice.nvim
 ```help
 `<leader>ff` - open file find
 `<leader>fg` - open live grep window
-`<leader>fb` - open find buffer window for current buffer(but I've already use bufferline as a plugin for buffer UI)
+`<leader>fb` - open find buffer window for current buffers(but I've already use bufferline as a plugin for buffer UI)
 ```
 
 ### KeyBind for Comment
