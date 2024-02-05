@@ -52,7 +52,7 @@ return {
 		"akinsho/bufferline.nvim",
 		after = "catppuccin",
 		version = "*",
-		dependencies = "nvi5-tree/nvim-web-devicons",
+		dependencies = "nvim-tree/nvim-web-devicons",
 		config = function()
 			vim.opt.termguicolors = true
 			require("bufferline").setup({
