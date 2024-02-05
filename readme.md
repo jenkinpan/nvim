@@ -44,7 +44,9 @@ Noice.nvim
 - NORMAL mode
 
 ```help
-
+`<leader>ff` - open file find 
+`<leader>fg` - open live grep window
+`<leader>fb` - open find buffer window for current buffer(but I've already use bufferline as a plugin for buffer UI)
 ```
 
 ### KeyBind for Comment
