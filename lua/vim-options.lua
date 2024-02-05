@@ -34,7 +34,8 @@ map("v", "<C-v>", "<C-R>+", opts)
 map("n", "<leader>n", ":noh <CR>", opts)
 
 -- set keybind of folds
-
+map("n", "<leader>fc", ":foldclose <CR>", opts) -- close a fold 
+map("n", "<leader>fo", ":foldopen <CR>", opts) -- open a fold 
 
 -- set KeyBind for BufferLine
 -- set to go a specific buffer
