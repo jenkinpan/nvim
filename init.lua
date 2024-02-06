@@ -14,6 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- import vim setting and keymappings
 require("vim-options")
-require("keymappings")
+require("keymaps")
 -- import plugins, and the file location is `nvim/lua/plugins`
 require("lazy").setup("plugins")
