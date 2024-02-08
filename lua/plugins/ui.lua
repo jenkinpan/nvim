@@ -2,6 +2,7 @@ return {
 	{
 		-- set UI: lualine(or call it status line)
 		"nvim-lualine/lualine.nvim",
+		event = "VimEnter",
 		config = function()
 			require("lualine").setup({
 				options = {

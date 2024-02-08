@@ -18,17 +18,20 @@ map("!", "<C-v>", "<C-R>+", opts)
 map("t", "<C-v>", "<C-R>+", opts)
 map("v", "<C-v>", "<C-R>+", opts)
 
--- cancel hightlight search result for /
+-- open Lazy
+map("n", "<leader>l", ":Lazy <CR>", opts)
+
+-- cancel highlight search result for /
 map("n", "<leader>n", ":noh <CR>", opts)
 
 -- set keybind of folds
-map("n", "<leader>fc", ":foldclose <CR>", opts) -- close a fold
-map("n", "<leader>fo", ":foldopen <CR>", opts) -- open a fold
+map("n", "<leader>fc", ":foldclose <CR>", opts)
+map("n", "<leader>fo", ":foldopen <CR>", opts)
 
 -- set KeyBind for BufferLine
-map("n", "<leader>b", ":BufferLinePick <CR>", opts) -- go to a specific buffer
-map("n", "<leader>cb", ":BufferLinePickClose <CR>", opts) -- close a specific buffer
-map("n", "<leader>co", ":BufferLineCloseOthers <CR>", opts) -- close other buffers
+map("n", "<leader>bp", ":BufferLinePick <CR>", opts) -- go to a specific buffer
+map("n", "<leader>bc", ":BufferLinePickClose <CR>", opts) -- close a specific buffer
+map("n", "<leader>bo", ":BufferLineCloseOthers <CR>", opts) -- close other buffers
 
 -- set choose buffer by cycle next
 map("n", "<c-tab>", ":BufferLineCycleNext <CR>", opts)
@@ -77,18 +80,3 @@ map("n", "<leader>fg", ":Telescope live_grep <CR>", opts)
 -- debugging key bind
 map("n", "<leader>dt", ":DapToggleBreakpoint <CR>", opts)
 map("n", "<leader>dc", ":Dapcontinue <CR>", opts)
-
--- local wkopts = {
--- 	mode = "n", -- NORMAL mode
--- 	-- prefix: use "<leader>f" for example for mapping everything related to finding files
--- 	--   -- the prefix is prepended to every mapping part of `mappings`
--- 	prefix = "<leader>",
--- 	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
--- 	silent = true, -- use `silent` when creating keymaps
--- 	noremap = true, -- use `noremap` when creating keymaps
--- 	nowait = false, -- use `nowait` when creating keymaps
--- 	expr = false, -- use `expr` when creating keymaps
--- }
-
--- local wk = require("which-key")
--- wk.register({ ds = { "n", ":NoiceDismiss <CR>", "dismiss noice messages" }, wkopts })
