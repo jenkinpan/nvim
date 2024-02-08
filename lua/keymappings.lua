@@ -5,10 +5,10 @@ local opts = { noremap = true, silent = true }
 -- Only in neovide, the below keymaps work
 -- require neovide
 if vim.g.neovide then
-	map("v", "<C-c>", '"+y')      -- Copy
-	map("n", "<C-v>", '"+P')      -- Paste normal mode
-	map("v", "<C-v>", '"+P')      -- Paste visual mode
-	map("c", "<C-v>", "<C-R>+")   -- Paste command mode
+	map("v", "<C-c>", '"+y') -- Copy
+	map("n", "<C-v>", '"+P') -- Paste normal mode
+	map("v", "<C-v>", '"+P') -- Paste visual mode
+	map("c", "<C-v>", "<C-R>+") -- Paste command mode
 	map("i", "<C-v>", '<ESC>l"+Pli') -- Paste insert mode
 end
 
@@ -23,11 +23,11 @@ map("n", "<leader>n", ":noh <CR>", opts)
 
 -- set keybind of folds
 map("n", "<leader>fc", ":foldclose <CR>", opts) -- close a fold
-map("n", "<leader>fo", ":foldopen <CR>", opts)  -- open a fold
+map("n", "<leader>fo", ":foldopen <CR>", opts) -- open a fold
 
 -- set KeyBind for BufferLine
-map("n", "<leader>b", ":BufferLinePick <CR>", opts)         -- go to a specific buffer
-map("n", "<leader>cb", ":BufferLinePickClose <CR>", opts)   -- close a specific buffer
+map("n", "<leader>b", ":BufferLinePick <CR>", opts) -- go to a specific buffer
+map("n", "<leader>cb", ":BufferLinePickClose <CR>", opts) -- close a specific buffer
 map("n", "<leader>co", ":BufferLineCloseOthers <CR>", opts) -- close other buffers
 
 -- set choose buffer by cycle next
@@ -58,6 +58,7 @@ map("n", "<C-g>", ":Neotree toggle git_status <CR>", opts)
 map("n", "K", vim.lsp.buf.hover, {})
 map("n", "gd", vim.lsp.buf.definition, {})
 map("n", "<leader>ca", vim.lsp.buf.code_action, {})
+
 -- set shortcut for format code
 map("n", "<leader>gf", vim.lsp.buf.format, {})
 
@@ -76,3 +77,18 @@ map("n", "<leader>fg", ":Telescope live_grep <CR>", opts)
 -- debugging key bind
 map("n", "<leader>dt", ":DapToggleBreakpoint <CR>", opts)
 map("n", "<leader>dc", ":Dapcontinue <CR>", opts)
+
+-- local wkopts = {
+-- 	mode = "n", -- NORMAL mode
+-- 	-- prefix: use "<leader>f" for example for mapping everything related to finding files
+-- 	--   -- the prefix is prepended to every mapping part of `mappings`
+-- 	prefix = "<leader>",
+-- 	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+-- 	silent = true, -- use `silent` when creating keymaps
+-- 	noremap = true, -- use `noremap` when creating keymaps
+-- 	nowait = false, -- use `nowait` when creating keymaps
+-- 	expr = false, -- use `expr` when creating keymaps
+-- }
+
+-- local wk = require("which-key")
+-- wk.register({ ds = { "n", ":NoiceDismiss <CR>", "dismiss noice messages" }, wkopts })
