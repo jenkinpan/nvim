@@ -3,14 +3,26 @@
 use Lazy to manage plugins
 
 ## file tree
-
-|-- init.lua<br>
-|-- lua<br>
-|--|-- core<br>
-|--|--|--options.lua<br>
-|--|--|--keymaps.lua<br>
-|--|-- plugins<br>
-`---------------------
+├── init.lua<br>
+├── lua<br>
+│   ├── core<br>
+│   │   ├── keymappings.lua<br>
+│   │   └── options.lua<br>
+│   └── plugins<br>
+│       ├── colorscheme.lua<br>
+│       ├── comment.lua<br>
+│       ├── compeletions.lua<br>
+│       ├── copilot.lua<br>
+│       ├── debuggging.lua<br>
+│       ├── flash.lua<br>
+│       ├── git-stuff.lua<br>
+│       ├── lsp-config.lua<br>
+│       ├── neo-tree.lua<br>
+│       ├── none-ls.lua<br>
+│       ├── telecope.lua<br>
+│       ├── treesitter.lua<br>
+│       └── ui.lua<br>
+└── readme.md
 
 ## Installed Plugins
 
