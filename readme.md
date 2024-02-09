@@ -6,9 +6,9 @@ use Lazy to manage plugins
 
 |-- init.lua<br>
 |-- lua<br>
-|--|-- core
-|--|--|--options.lua
-|--|--|--keymaps.lua
+|--|-- core<br>
+|--|--|--options.lua<br>
+|--|--|--keymaps.lua<br>
 |--|-- plugins<br>
 `---------------------
 
