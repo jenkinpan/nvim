@@ -6,7 +6,7 @@ use Lazy to manage plugins
 ├── init.lua<br>
 ├── lua<br>
 │   ├── core<br>
-│   │   ├── keymappings.lua<br>
+│   │   ├── keymaps.lua<br>
 │   │   └── options.lua<br>
 │   └── plugins<br>
 │       ├── colorscheme.lua<br>
