@@ -1,3 +1,4 @@
+vim.g.mapleader = " "     -- set space as leader key
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 

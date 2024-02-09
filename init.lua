@@ -12,8 +12,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- import plugins, and the file location is `nvim/lua/plugins`
+require("lazy").setup("plugins")
+
 -- import vim setting and keymappings
 require("core.keymaps")
 require("core.options")
--- import plugins, and the file location is `nvim/lua/plugins`
-require("lazy").setup("plugins")
