@@ -6,8 +6,10 @@ use Lazy to manage plugins
 
 |-- init.lua<br>
 |-- lua<br>
+|--|-- core
+|--|--|--options.lua
+|--|--|--keymaps.lua
 |--|-- plugins<br>
-|--|-- vim-options.lua<br>
 `---------------------
 
 ## Installed Plugins
