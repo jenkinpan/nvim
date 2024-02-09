@@ -1,18 +1,9 @@
 vim.g.mapleader = " "     -- set space as leader key
+
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 -- KeyBind
--- Only in neovide, the below keymaps work
--- require neovide
-if vim.g.neovide then
-	map("v", "<C-c>", '"+y') -- Copy
-	map("n", "<C-v>", '"+P') -- Paste normal mode
-	map("v", "<C-v>", '"+P') -- Paste visual mode
-	map("c", "<C-v>", "<C-R>+") -- Paste command mode
-	map("i", "<C-v>", '<ESC>l"+Pli') -- Paste insert mode
-end
-
 -- Allow clipboard copy paste in neovim
 map("", "<C-v>", "+p<CR>", opts)
 map("!", "<C-v>", "<C-R>+", opts)
