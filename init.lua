@@ -18,3 +18,4 @@ require("lazy").setup("plugins")
 -- import vim setting and keymappings
 require("core.keymaps")
 require("core.options")
+require("core.neovide")
