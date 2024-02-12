@@ -3,6 +3,8 @@ return {
 	version = "*",
 	opts = {},
 	config = function()
-		require("toggleterm").setup()
+		require("toggleterm").setup({
+			size = 7,
+		})
 	end,
 }
