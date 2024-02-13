@@ -9,7 +9,7 @@
 -- cmd("set softtabstop=4")
 -- cmd("set mouse=a")        -- allow mouse action
 -- cmd("set mousemoveevent") -- set mouse move detection for bufferline hover show close icon
-vim.g.mapleader = " "     -- set space as leader key
+vim.g.mapleader = " " -- set space as leader key
 
 local opt = vim.opt
 
@@ -21,5 +21,5 @@ opt.tabstop = 4
 opt.shiftwidth = 4
 opt.smarttab = true
 opt.softtabstop = 4
-opt.mouse="a"
+opt.mouse = "a"
 opt.mousemoveevent = true
