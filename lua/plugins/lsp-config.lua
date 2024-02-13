@@ -44,6 +44,10 @@ return {
 				capabilities = capabilities,
 			})
 
+			lspconfig.volar.setup({
+				capabilities = capabilities,
+			})
+
 			lspconfig.eslint.setup({
 				capabilities = capabilities,
 			})
