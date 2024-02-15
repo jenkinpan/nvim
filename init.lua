@@ -17,5 +17,3 @@ require("core.options")
 require("core.neovide")
 -- import plugins, and the file location is `nvim/lua/plugins`
 require("lazy").setup("plugins")
-
--- import vim setting and keymappings
