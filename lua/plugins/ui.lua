@@ -79,6 +79,12 @@ return {
 							text_align = "center",
 							separator = true,
 						},
+						{
+							filetype = "undotree",
+							text = "Undo Tree",
+							text_align = "center",
+							separator = true,
+						},
 					},
 					show_close_icon = false,
 					hover = {
@@ -206,5 +212,9 @@ return {
 				},
 			})
 		end,
+	},
+	{
+		"mbbill/undotree",
+		event = "VeryLazy",
 	},
 }
