@@ -4,6 +4,19 @@ return {
 		lazy = false,
 		config = function()
 			require("mason").setup({
+				ensure_installed = {
+					"black",
+					"eslint",
+					"rust_analyzer",
+					"tsserver",
+					"volar",
+					"ast_grep",
+					"emmet_ls",
+					"stylua",
+					"lua_ls",
+					"eslint_d",
+					"prettier",
+				},
 				ui = {
 					icons = {
 						package_installed = "✓",
@@ -41,6 +54,10 @@ return {
 			})
 
 			lspconfig.tsserver.setup({
+				capabilities = capabilities,
+			})
+
+			lspconfig.emmet_ls.setup({
 				capabilities = capabilities,
 			})
 
