@@ -4,19 +4,6 @@ return {
 		lazy = false,
 		config = function()
 			require("mason").setup({
-				ensure_installed = {
-					"black",
-					"eslint",
-					"rust_analyzer",
-					"tsserver",
-					"volar",
-					"ast_grep",
-					"emmet_ls",
-					"stylua",
-					"lua_ls",
-					"eslint_d",
-					"prettier",
-				},
 				ui = {
 					icons = {
 						package_installed = "✓",
@@ -31,6 +18,17 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		lazy = false,
 		opts = {
+			ensure_installed = {
+				"eslint",
+				"rust_analyzer",
+				"tsserver",
+				"volar",
+				"ast_grep",
+				"emmet_ls",
+				"lua_ls",
+				"grammarly",
+			},
+
 			auto_install = true,
 		},
 	},
@@ -58,6 +56,10 @@ return {
 			})
 
 			lspconfig.emmet_ls.setup({
+				capabilities = capabilities,
+			})
+
+			lspconfig.grammarly.setup({
 				capabilities = capabilities,
 			})
 
