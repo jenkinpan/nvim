@@ -59,6 +59,10 @@ return {
 				capabilities = capabilities,
 			})
 
+			lspconfig.ast_grep.setup({
+				capabilities = capabilities,
+			})
+
 			lspconfig.grammarly.setup({
 				capabilities = capabilities,
 			})
