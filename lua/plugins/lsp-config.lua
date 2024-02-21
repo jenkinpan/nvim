@@ -27,6 +27,7 @@ return {
 				"emmet_ls",
 				"lua_ls",
 				"grammarly",
+				"slint_lsp",
 			},
 
 			auto_install = true,
@@ -52,6 +53,10 @@ return {
 			})
 
 			lspconfig.tsserver.setup({
+				capabilities = capabilities,
+			})
+
+			lspconfig.slint_lsp.setup({
 				capabilities = capabilities,
 			})
 

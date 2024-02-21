@@ -18,6 +18,7 @@ return {
 				"gitignore",
 				"javascript",
 				"python",
+				"slint",
 			},
 			auto_install = true,
 			highlight = { enalbe = true },
