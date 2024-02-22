@@ -19,6 +19,7 @@ return {
 		lazy = false,
 		opts = {
 			ensure_installed = {
+				-- ensure_installed LSP servers
 				"eslint",
 				"rust_analyzer",
 				"tsserver",
