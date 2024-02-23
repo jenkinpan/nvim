@@ -13,3 +13,4 @@ opt.softtabstop = 4
 opt.mouse = "a"
 opt.mousemoveevent = true
 opt.ignorecase = true
+opt.termguicolors = true
