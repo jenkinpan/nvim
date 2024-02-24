@@ -30,15 +30,15 @@ map("n", "<leader><tab>", ":BufferLineCycleNext <CR>", opts)
 
 
 -- set choose buffer by number
-map("n", "<c-1>", ":BufferLineGoToBuffer 1 <CR>", opts)
-map("n", "<c-2>", ":BufferLineGoToBuffer 2 <CR>", opts)
-map("n", "<c-3>", ":BufferLineGoToBuffer 3 <CR>", opts)
-map("n", "<c-4>", ":BufferLineGoToBuffer 4 <CR>", opts)
-map("n", "<c-5>", ":BufferLineGoToBuffer 5 <CR>", opts)
-map("n", "<c-6>", ":BufferLineGoToBuffer 6 <CR>", opts)
-map("n", "<c-7>", ":BufferLineGoToBuffer 7 <CR>", opts)
-map("n", "<c-8>", ":BufferLineGoToBuffer 8 <CR>", opts)
-map("n", "<c-9>", ":BufferLineGoToBuffer 9 <CR>", opts)
+map("n", "<leader>1", ":BufferLineGoToBuffer 1 <CR>", opts)
+map("n", "<leader>2", ":BufferLineGoToBuffer 2 <CR>", opts)
+map("n", "<leader>3", ":BufferLineGoToBuffer 3 <CR>", opts)
+map("n", "<leader>4", ":BufferLineGoToBuffer 4 <CR>", opts)
+map("n", "<leader>5", ":BufferLineGoToBuffer 5 <CR>", opts)
+map("n", "<leader>6", ":BufferLineGoToBuffer 6 <CR>", opts)
+map("n", "<leader>7", ":BufferLineGoToBuffer 7 <CR>", opts)
+map("n", "<leader>8", ":BufferLineGoToBuffer 8 <CR>", opts)
+map("n", "<leader>9", ":BufferLineGoToBuffer 9 <CR>", opts)
 
 -- Navigate vim panes better
 map("n", "<c-k>", ":wincmd k<CR>", opts)
