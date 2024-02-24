@@ -26,7 +26,8 @@ map("n", "<leader>bc", ":BufferLinePickClose <CR>", opts) -- close a specific bu
 map("n", "<leader>bo", ":BufferLineCloseOthers <CR>", opts) -- close other buffers
 
 -- set choose buffer by cycle next
-map("n", "<c-tab>", ":BufferLineCycleNext <CR>", opts)
+map("n", "<leader><tab>", ":BufferLineCycleNext <CR>", opts)
+
 
 -- set choose buffer by number
 map("n", "<c-1>", ":BufferLineGoToBuffer 1 <CR>", opts)
@@ -63,8 +64,8 @@ end
 vim.cmd("autocmd! TermOpen term://*  lua set_terminal_keymaps()")
 
 -- set terminal toggle
-map("n", "<C-`>", ":ToggleTerm <CR>", opts)
-map("t", "<C-`>", [[<Cmd>ToggleTerm <CR>]], opts)
+map("n", "<leader>`", ":ToggleTerm <CR>", opts)
+map("t", "<leader>`", [[<Cmd>ToggleTerm <CR>]], opts)
 
 -- set shortcut for Neotree
 map("n", "<C-n>", ":Neotree reveal <CR>", opts)
