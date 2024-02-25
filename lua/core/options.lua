@@ -1,5 +1,9 @@
 vim.g.mapleader = " " -- set space as leader key
 
+vim.g.indent_blankline_show_current_context = true
+vim.g.indent_blankline_context_patterns =
+	{ "class", "function", "method", "^if", "^while", "^for", "^object", "^table", "block", "arguments" }
+
 local opt = vim.opt
 
 opt.relativenumber = true
