@@ -24,6 +24,7 @@ return {
 		-- set UI: blankline
 		"lukas-reineke/indent-blankline.nvim",
 		event = "VeryLazy",
+		main = "ibl",
 		opts = {
 			indent = {
 				char = "┊",
@@ -46,7 +47,6 @@ return {
 				},
 			},
 		},
-		main = "ibl",
 	},
 	{
 		-- set UI: Buffer
