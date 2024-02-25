@@ -46,6 +46,7 @@ return {
 					name = "Git Stuffs",
 					p = { "<cmd>Gitsigns preview_hunk<cr>", "Preview Hunk" },
 				},
+				n = { "<cmd>noh<cr>", "Clear Highlight" },
 				z = {
 					name = "Fold Commands",
 					o = { "<cmd>foldopen<cr>", "Close fold" },
