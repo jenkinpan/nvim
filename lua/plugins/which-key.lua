@@ -44,7 +44,6 @@ return {
 				},
 				g = {
 					name = "Git Stuffs",
-					s = { "<cmd>Neotree toggle git_status<cr>", "Git Status" },
 					p = { "<cmd>Gitsigns preview_hunk<cr>", "Preview Hunk" },
 				},
 				z = {
