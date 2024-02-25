@@ -17,8 +17,8 @@ map("n", "<leader>l", ":Lazy <CR>", opts)
 map("n", "<leader>n", ":noh <CR>", opts)
 
 -- set keybind of folds
-map("n", "<leader>fc", ":foldclose <CR>", opts)
-map("n", "<leader>fo", ":foldopen <CR>", opts)
+map("n", "<leader>zc", ":foldclose <CR>", opts)
+map("n", "<leader>zo", ":foldopen <CR>", opts)
 
 -- set KeyBind for BufferLine
 map("n", "<leader>bp", ":BufferLinePick <CR>", opts) -- go to a specific buffer
@@ -29,15 +29,15 @@ map("n", "<leader>bo", ":BufferLineCloseOthers <CR>", opts) -- close other buffe
 map("n", "<leader><tab>", ":BufferLineCycleNext <CR>", opts)
 
 -- set choose buffer by number
-map("n", "<leader>1", ":BufferLineGoToBuffer 1 <CR>", opts)
-map("n", "<leader>2", ":BufferLineGoToBuffer 2 <CR>", opts)
-map("n", "<leader>3", ":BufferLineGoToBuffer 3 <CR>", opts)
-map("n", "<leader>4", ":BufferLineGoToBuffer 4 <CR>", opts)
-map("n", "<leader>5", ":BufferLineGoToBuffer 5 <CR>", opts)
-map("n", "<leader>6", ":BufferLineGoToBuffer 6 <CR>", opts)
-map("n", "<leader>7", ":BufferLineGoToBuffer 7 <CR>", opts)
-map("n", "<leader>8", ":BufferLineGoToBuffer 8 <CR>", opts)
-map("n", "<leader>9", ":BufferLineGoToBuffer 9 <CR>", opts)
+map("n", "<leader>b1", ":BufferLineGoToBuffer 1 <CR>", opts)
+map("n", "<leader>b2", ":BufferLineGoToBuffer 2 <CR>", opts)
+map("n", "<leader>b3", ":BufferLineGoToBuffer 3 <CR>", opts)
+map("n", "<leader>b4", ":BufferLineGoToBuffer 4 <CR>", opts)
+map("n", "<leader>b5", ":BufferLineGoToBuffer 5 <CR>", opts)
+map("n", "<leader>b6", ":BufferLineGoToBuffer 6 <CR>", opts)
+map("n", "<leader>b7", ":BufferLineGoToBuffer 7 <CR>", opts)
+map("n", "<leader>b8", ":BufferLineGoToBuffer 8 <CR>", opts)
+map("n", "<leader>b9", ":BufferLineGoToBuffer 9 <CR>", opts)
 
 -- Navigate vim panes better
 map("n", "<c-k>", ":wincmd k<CR>", opts)
@@ -76,7 +76,7 @@ map("n", "gd", vim.lsp.buf.definition, {})
 map("n", "<leader>ca", vim.lsp.buf.code_action, {})
 
 -- set shortcut for format code
-map("n", "<leader>gf", vim.lsp.buf.format, {}, "format code")
+map("n", "<leader>cf", vim.lsp.buf.format, {}, "format code")
 
 -- set dismiss noice message
 map("n", "<leader>ds", ":NoiceDismiss <CR>", opts)
