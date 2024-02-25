@@ -28,7 +28,6 @@ map("n", "<leader>bo", ":BufferLineCloseOthers <CR>", opts) -- close other buffe
 -- set choose buffer by cycle next
 map("n", "<leader><tab>", ":BufferLineCycleNext <CR>", opts)
 
-
 -- set choose buffer by number
 map("n", "<leader>1", ":BufferLineGoToBuffer 1 <CR>", opts)
 map("n", "<leader>2", ":BufferLineGoToBuffer 2 <CR>", opts)
@@ -77,7 +76,7 @@ map("n", "gd", vim.lsp.buf.definition, {})
 map("n", "<leader>ca", vim.lsp.buf.code_action, {})
 
 -- set shortcut for format code
-map("n", "<leader>gf", vim.lsp.buf.format, {})
+map("n", "<leader>gf", vim.lsp.buf.format, {}, "format code")
 
 -- set dismiss noice message
 map("n", "<leader>ds", ":NoiceDismiss <CR>", opts)
@@ -86,8 +85,8 @@ map("n", "<leader>ds", ":NoiceDismiss <CR>", opts)
 map("n", "<leader>gp", ":Gitsigns preview_hunk <CR>", opts)
 
 -- set telescope key bind
-map("n", "<leader>fb", ":Telescope buffers <CR>", {})
-map("n", "<leader>fh", ":Telescope help_tags <CR>", {})
+map("n", "<leader>fb", ":Telescope buffers <CR>", opts)
+map("n", "<leader>fh", ":Telescope help_tags <CR>", opts)
 map("n", "<leader>ff", ":Telescope find_files <CR>", opts)
 map("n", "<leader>fg", ":Telescope live_grep <CR>", opts)
 
