@@ -21,7 +21,7 @@ return {
 		end,
 	},
 	{
-		-- set UI: blankline
+		-- set UI: indent-blankline
 		"lukas-reineke/indent-blankline.nvim",
 		event = "VeryLazy",
 		main = "ibl",
@@ -146,6 +146,8 @@ return {
 		end,
 	},
 	{
+		-- set UI: statuscol
+		-- statuscol used for ufo no number when fold shows
 		"luukvbaal/statuscol.nvim",
 		config = function()
 			local builtin = require("statuscol.builtin")
@@ -227,9 +229,5 @@ return {
 				},
 			})
 		end,
-	},
-	{
-		"mbbill/undotree",
-		event = "VeryLazy",
 	},
 }

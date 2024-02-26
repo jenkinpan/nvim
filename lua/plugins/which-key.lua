@@ -45,8 +45,14 @@ return {
 				g = {
 					name = "Git Stuffs",
 					p = { "<cmd>Gitsigns preview_hunk<cr>", "Preview Hunk" },
+					g = { "<cmd>LazyGit<cr>", "LazyGit" },
 				},
 				n = { "<cmd>noh<cr>", "Clear Highlight" },
+				u = {
+					name = "Undo Tree",
+					t = { "<cmd>UndotreeToggle<cr>", "Toggle Undo Tree" },
+					f = { "<cmd>UndotreeFocus<cr>", "Focus Undo Tree" },
+				},
 				z = {
 					name = "Fold Commands",
 					o = { "<cmd>foldopen<cr>", "Close fold" },

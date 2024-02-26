@@ -81,8 +81,10 @@ map("n", "<leader>cf", vim.lsp.buf.format, {}, "format code")
 -- set dismiss noice message
 map("n", "<leader>ds", ":NoiceDismiss <CR>", opts)
 
+-- Git Stuffs
 -- set get preview code with gitsigns
 map("n", "<leader>gp", ":Gitsigns preview_hunk <CR>", opts)
+map("n", "<leader>gg", ":LazyGit <CR>", opts)
 
 -- set telescope key bind
 map("n", "<leader>fb", ":Telescope buffers <CR>", opts)
@@ -93,3 +95,7 @@ map("n", "<leader>fg", ":Telescope live_grep <CR>", opts)
 -- debugging key bind
 map("n", "<leader>dt", ":DapToggleBreakpoint <CR>", opts)
 map("n", "<leader>dc", ":Dapcontinue <CR>", opts)
+
+-- UndoTree key bind
+map("n", "<leader>ut", ":UndotreeToggle <CR>", opts)
+map("n", "<leader>uf", ":UndotreeFocus <CR>", opts)
