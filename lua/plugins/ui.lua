@@ -200,7 +200,7 @@ return {
 						size = {
 							width = 60,
 							height = "auto",
-						},
+						}
 					},
 					popupmenu = {
 						position = {
