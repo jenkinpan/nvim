@@ -3,25 +3,26 @@
 use Lazy to manage plugins
 
 ## file tree
+
 ├── init.lua<br>
 ├── lua<br>
 │   ├── core<br>
 │   │   ├── keymaps.lua<br>
 │   │   └── options.lua<br>
 │   └── plugins<br>
-│       ├── colorscheme.lua<br>
-│       ├── comment.lua<br>
-│       ├── compeletions.lua<br>
-│       ├── copilot.lua<br>
-│       ├── debuggging.lua<br>
-│       ├── flash.lua<br>
-│       ├── git-stuff.lua<br>
-│       ├── lsp-config.lua<br>
-│       ├── neo-tree.lua<br>
-│       ├── none-ls.lua<br>
-│       ├── telecope.lua<br>
-│       ├── treesitter.lua<br>
-│       └── ui.lua<br>
+│   ├── colorscheme.lua<br>
+│   ├── comment.lua<br>
+│   ├── compeletions.lua<br>
+│   ├── copilot.lua<br>
+│   ├── debuggging.lua<br>
+│   ├── flash.lua<br>
+│   ├── git-stuff.lua<br>
+│   ├── lsp-config.lua<br>
+│   ├── neo-tree.lua<br>
+│   ├── none-ls.lua<br>
+│   ├── telecope.lua<br>
+│   ├── treesitter.lua<br>
+│   └── ui.lua<br>
 └── readme.md
 
 ## Installed Plugins
@@ -63,8 +64,7 @@ nvim-ufo
 ```help
 `<leader>ff` - open file find
 `<leader>fg` - open live grep window
-`<leader>fb` - open find buffer window for current buffers(but I've already use bufferline as a plugin for buffer UI)
-```
+`<leader>fb` - open find buffer window for current buffers```
 
 ### KeyBind for Comment
 
