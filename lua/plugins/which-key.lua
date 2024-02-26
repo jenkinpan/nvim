@@ -46,6 +46,7 @@ return {
 					name = "Git Stuffs",
 					p = { "<cmd>Gitsigns preview_hunk<cr>", "Preview Hunk" },
 					g = { "<cmd>LazyGit<cr>", "LazyGit" },
+					r = { "<cmd>lua require('telescope').extensions.lazygit.lazygit()<cr>", "Show Git Repos" },
 				},
 				n = { "<cmd>noh<cr>", "Clear Highlight" },
 				u = {

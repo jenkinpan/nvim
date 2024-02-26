@@ -84,7 +84,12 @@ map("n", "<leader>ds", ":NoiceDismiss <CR>", opts)
 -- Git Stuffs
 -- set get preview code with gitsigns
 map("n", "<leader>gp", ":Gitsigns preview_hunk <CR>", opts)
+-- open LazyGit
 map("n", "<leader>gg", ":LazyGit <CR>", opts)
+-- open Telescope git repos
+map("n", "<leader>gr", function()
+	require("telescope").extensions.lazygit.lazygit()
+end, opts)
 
 -- set telescope key bind
 map("n", "<leader>fb", ":Telescope buffers <CR>", opts)
