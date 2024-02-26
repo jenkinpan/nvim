@@ -20,7 +20,7 @@ use Lazy to manage plugins
 │   ├── lsp-config.lua<br>
 │   ├── neo-tree.lua<br>
 │   ├── none-ls.lua<br>
-│   ├── telecope.lua<br>
+│   ├── telescope.lua<br>
 │   ├── treesitter.lua<br>
 │   └── ui.lua<br>
 └── readme.md
