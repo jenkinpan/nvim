@@ -111,3 +111,11 @@ map("n", "<leader>dc", ":Dapcontinue <CR>", opts)
 -- UndoTree key bind
 map("n", "<leader>ut", ":UndotreeToggle <CR>", opts)
 map("n", "<leader>uf", ":UndotreeFocus <CR>", opts)
+
+-- Trouble key bind
+map("n", "<leader>xx", ":TroubleToggle <CR>", opts)
+map("n", "<leader>xw", ":TroubleToggle lsp_workspace_diagnostics <CR>", opts)
+map("n", "<leader>xd", ":TroubleToggle lsp_document_diagnostics <CR>", opts)
+map("n", "<leader>xq", ":TroubleToggle quickfix <CR>", opts)
+map("n", "<leader>xl", ":TroubleToggle loclist <CR>", opts)
+map("n", "gR", ":TroubleToggle lsp_references <CR>", opts)

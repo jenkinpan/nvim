@@ -18,6 +18,7 @@ return {
 
 		require("which-key").register({
 			["<leader>"] = {
+				["`"] = { "<cmd>ToggleTerm<cr>", "Toggle Terminal" },
 				b = {
 					name = "Buffers",
 					p = { "<cmd>BufferLinePick<cr>", "Pick buffer" },
@@ -45,7 +46,7 @@ return {
 					name = "Git Stuffs",
 					p = { "<cmd>Gitsigns preview_hunk<cr>", "Preview Hunk" },
 					g = { "<cmd>LazyGit<cr>", "LazyGit" },
-					r = { "<cmd>lua require('telescope').extensions.lazygit.lazygit()<cr>", "Show Git Repos" },
+					r = { "<cmd>lua require('telescope').extensions.lazygit.lazygit()<cr>", "Show historical Repos" },
 				},
 				l = { "<cmd>Lazy<cr>", "Open Lazy" },
 				M = { "<cmd>Mason<cr>", "Open Mason" },
@@ -58,6 +59,14 @@ return {
 					name = "Undo Tree",
 					t = { "<cmd>UndotreeToggle<cr>", "Toggle Undo Tree" },
 					f = { "<cmd>UndotreeFocus<cr>", "Focus Undo Tree" },
+				},
+				x = {
+					name = "Trouble",
+					x = { "<cmd>TroubleToggle<cr>", "Toggle Trouble" },
+					w = { "<cmd>TroubleToggle lsp_workspace_diagnostics<cr>", "Workspace Diagnostics" },
+					d = { "<cmd>TroubleToggle lsp_document_diagnostics<cr>", "Document Diagnostics" },
+					q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
+					l = { "<cmd>TroubleToggle loclist<cr>", "Loclist" },
 				},
 				z = {
 					name = "Fold Commands",
