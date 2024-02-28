@@ -113,9 +113,21 @@ map("n", "<leader>ut", ":UndotreeToggle <CR>", opts)
 map("n", "<leader>uf", ":UndotreeFocus <CR>", opts)
 
 -- Trouble key bind
-map("n", "<leader>xx", ":TroubleToggle <CR>", opts)
-map("n", "<leader>xw", ":TroubleToggle lsp_workspace_diagnostics <CR>", opts)
-map("n", "<leader>xd", ":TroubleToggle lsp_document_diagnostics <CR>", opts)
-map("n", "<leader>xq", ":TroubleToggle quickfix <CR>", opts)
-map("n", "<leader>xl", ":TroubleToggle loclist <CR>", opts)
-map("n", "gR", ":TroubleToggle lsp_references <CR>", opts)
+vim.keymap.set("n", "<leader>xx", function()
+	require("trouble").toggle()
+end) -- Toggle Trouble
+vim.keymap.set("n", "<leader>xw", function()
+	require("trouble").toggle("workspace_diagnostics")
+end) -- Toggle Workspace Trouble
+vim.keymap.set("n", "<leader>xd", function()
+	require("trouble").toggle("document_diagnostics")
+end) -- Toggle Document Trouble
+vim.keymap.set("n", "<leader>xq", function()
+	require("trouble").toggle("quickfix")
+end) -- Toggle Quickfix Trouble
+vim.keymap.set("n", "<leader>xl", function()
+	require("trouble").toggle("loclist")
+end) -- Toggle Loclist Trouble
+vim.keymap.set("n", "gR", function()
+	require("trouble").toggle("lsp_references")
+end) -- Toggle LSP References
