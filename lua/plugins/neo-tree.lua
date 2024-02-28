@@ -1,5 +1,6 @@
 return {
 	"nvim-neo-tree/neo-tree.nvim",
+	event = "VeryLazy",
 	branch = "v3.x",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
@@ -9,6 +10,7 @@ return {
 		{
 			"s1n7ax/nvim-window-picker",
 			version = "2.*",
+			event = "VeryLazy",
 			config = function()
 				require("window-picker").setup({
 					filter_rules = {

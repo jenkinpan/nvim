@@ -8,8 +8,9 @@ return {
 		"rafamadriz/friendly-snippets",
 		"hrsh7th/cmp-buffer", -- source for text in buffer
 		"hrsh7th/cmp-path", -- source for file system paths
-		"windwp/nvim-autopairs",
-		"onsails/lspkind.nvim",
+		"windwp/nvim-autopairs", -- autopairs
+		"onsails/lspkind.nvim", -- pictogram icons for lsp/autocompletion
+		"hrsh7th/cmp-cmdline", -- cmdline completion
 	},
 	config = function()
 		local cmp_autopairs = require("nvim-autopairs.completion.cmp")
@@ -60,6 +61,20 @@ return {
 					},
 				}),
 			},
+		})
+		-- `:` cmdline completion setup.
+		cmp.setup.cmdline(":", {
+			mapping = cmp.mapping.preset.cmdline(),
+			sources = cmp.config.sources({
+				{ name = "path" },
+			}, {
+				{
+					name = "cmdline",
+					option = {
+						ignore_cmds = { "Man", "!" },
+					},
+				},
+			}),
 		})
 	end,
 }
