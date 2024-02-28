@@ -101,8 +101,11 @@ return {
 		event = "VeryLazy",
 		dependencies = {
 			"kevinhwang91/promise-async",
+			"luukvbaal/statuscol.nvim",
 		},
 		config = function()
+			local builtin = require("statuscol.builtin")
+
 			local handler = function(virtText, lnum, endLnum, width, truncate)
 				local newVirtText = {}
 				local suffix = (" 󰁂 %d "):format(endLnum - lnum)
@@ -137,14 +140,7 @@ return {
 					return { "treesitter", "indent" }
 				end,
 			})
-		end,
-	},
-	{
-		-- set UI: statuscol
-		-- statuscol used for ufo no number when fold shows
-		"luukvbaal/statuscol.nvim",
-		config = function()
-			local builtin = require("statuscol.builtin")
+
 			require("statuscol").setup({
 				relculright = true,
 				segments = {
