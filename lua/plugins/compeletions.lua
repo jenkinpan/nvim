@@ -43,10 +43,10 @@ return {
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" }, -- LSP source
-				{ name = "luasnip" }, -- snippets
 				{ name = "buffer" }, -- text with current buffer
 				{ name = "copilot" }, -- Copilot AI
 				{ name = "path" }, -- file system paths
+				{ name = "luasnip" }, -- snippets
 			}),
 			-- Enable pictogram icons for lsp/autocompletion
 			formatting = {
