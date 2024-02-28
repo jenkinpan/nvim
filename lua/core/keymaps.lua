@@ -15,10 +15,13 @@ map("v", "<C-v>", "<C-R>+", opts)
 map("n", "<leader>l", ":Lazy <CR>", opts)
 
 -- Open Mason
-map("n", "<leader>m", ":Mason <CR>", opts)
+map("n", "<leader>M", ":Mason <CR>", opts)
 
 -- cancel highlight search result for /
 map("n", "<leader>n", ":noh <CR>", opts)
+
+-- Toggle Symbols Outline
+map("n", "<leader>so", ":SymbolsOutline <CR>", opts)
 
 -- set keybind of folds
 map("n", "<leader>zc", ":foldclose <CR>", opts)

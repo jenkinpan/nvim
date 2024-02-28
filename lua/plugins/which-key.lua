@@ -48,7 +48,11 @@ return {
 					r = { "<cmd>lua require('telescope').extensions.lazygit.lazygit()<cr>", "Show Git Repos" },
 				},
 				l = { "<cmd>Lazy<cr>", "Open Lazy" },
-				m = { "<cmd>Mason<cr>", "Open Mason" },
+				M = { "<cmd>Mason<cr>", "Open Mason" },
+				s = {
+					name = "Symbols Outline",
+					o = { "<cmd>SymbolsOutline<cr>", "Toggle Symbols Outline" },
+				},
 				n = { "<cmd>noh<cr>", "Cancel highlight" },
 				u = {
 					name = "Undo Tree",
