@@ -62,6 +62,7 @@ return {
 				}),
 			},
 		})
+
 		-- `:` cmdline completion setup.
 		cmp.setup.cmdline(":", {
 			mapping = cmp.mapping.preset.cmdline(),
