@@ -1,4 +1,5 @@
-vim.g.mapleader = " " -- set <space>key as leader key
+vim.g.mapleader = " " -- set <space> key as leader key
+vim.g.maplocalleader = " " -- set <space> key as local leader key
 
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
@@ -10,8 +11,11 @@ map("!", "<C-v>", "<C-R>+", opts)
 map("t", "<C-v>", "<C-R>+", opts)
 map("v", "<C-v>", "<C-R>+", opts)
 
--- open Lazy
+-- Open Lazy
 map("n", "<leader>l", ":Lazy <CR>", opts)
+
+-- Open Mason
+map("n", "<leader>m", ":Mason <CR>", opts)
 
 -- cancel highlight search result for /
 map("n", "<leader>n", ":noh <CR>", opts)

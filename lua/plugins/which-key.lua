@@ -18,7 +18,6 @@ return {
 
 		require("which-key").register({
 			["<leader>"] = {
-				l = { "<cmd>Lazy<cr>", "Lazy" },
 				b = {
 					name = "Buffers",
 					p = { "<cmd>BufferLinePick<cr>", "Pick buffer" },
@@ -48,7 +47,9 @@ return {
 					g = { "<cmd>LazyGit<cr>", "LazyGit" },
 					r = { "<cmd>lua require('telescope').extensions.lazygit.lazygit()<cr>", "Show Git Repos" },
 				},
-				n = { "<cmd>noh<cr>", "Clear Highlight" },
+				l = { "<cmd>Lazy<cr>", "Open Lazy" },
+				m = { "<cmd>Mason<cr>", "Open Mason" },
+				n = { "<cmd>noh<cr>", "Cancel highlight" },
 				u = {
 					name = "Undo Tree",
 					t = { "<cmd>UndotreeToggle<cr>", "Toggle Undo Tree" },

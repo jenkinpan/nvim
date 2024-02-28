@@ -5,6 +5,7 @@ return {
 		config = function()
 			require("mason").setup({
 				ui = {
+					border = "rounded",
 					icons = {
 						package_installed = "✓",
 						package_pending = "➜",
@@ -37,7 +38,7 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
-		lazy = false,
+		event = { "BufReadPost" },
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 

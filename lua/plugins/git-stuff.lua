@@ -1,6 +1,7 @@
 return {
 	{
 		"lewis6991/gitsigns.nvim",
+		event = "VeryLazy",
 		config = function()
 			require("gitsigns").setup({
 				current_line_blame = true,
@@ -9,6 +10,7 @@ return {
 	},
 	{
 		"kdheepak/lazygit.nvim",
+		event = "VeryLazy",
 		-- optional for floating window border decoration
 		dependencies = {
 			"nvim-telescope/telescope.nvim",
