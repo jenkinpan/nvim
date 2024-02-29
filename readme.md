@@ -61,7 +61,7 @@ nvim-ufo
 
 - NORMAL mode
 
-```help
+````help
 `<leader>ff` - open file find
 `<leader>fg` - open live grep window
 `<leader>fb` - open find buffer window for current buffers```
@@ -77,7 +77,7 @@ nvim-ufo
 `[count]gbc` - Toggles the number of line given as a prefix-count using blockwise
 `gc[count]{motion}` - (Op-pending) Toggles the region using linewise comment
 `gb[count]{motion}` - (Op-pending) Toggles the region using blockwise comments
-```
+````
 
 ```help
 `gco` - Insert comment to the next line and enters INSERT mode
