@@ -51,7 +51,7 @@ return {
 	{
 		-- set UI: Buffer
 		"akinsho/bufferline.nvim",
-		after = "catppuccin",
+		event = "VeryLazy",
 		version = "*",
 		dependencies = "nvim-tree/nvim-web-devicons",
 		config = function()
