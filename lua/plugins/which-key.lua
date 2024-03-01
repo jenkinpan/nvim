@@ -24,6 +24,11 @@ return {
 					p = { "<cmd>BufferLinePick<cr>", "Pick buffer" },
 					c = { "<cmd>BufferLinePickClose<cr>", "Close pick" },
 					o = { "<cmd>BufferLineCloseOthers<cr>", "Close others" },
+					["1"] = { "<cmd>BufferLineGoToBuffer 1<cr>", "Go to buffer 1" },
+					["2"] = { "<cmd>BufferLineGoToBuffer 2<cr>", "Go to buffer 2" },
+					["3"] = { "<cmd>BufferLineGoToBuffer 3<cr>", "Go to buffer 3" },
+					["4"] = { "<cmd>BufferLineGoToBuffer 4<cr>", "Go to buffer 4" },
+					["5"] = { "<cmd>BufferLineGoToBuffer 5<cr>", "Go to buffer 5" },
 				},
 				c = {
 					name = "Code Actions",
@@ -90,7 +95,7 @@ return {
 				},
 				z = {
 					name = "Fold Commands",
-					o = { "<cmd>foldopen<cr>", "Close current fold" },
+					o = { "<cmd>foldopen<cr>", "Open current fold" },
 					c = { "<cmd>foldclose<cr>", "Close current fold" },
 					a = { "<cmd>foldopen!<cr>", "Open all folds" },
 					r = { "<cmd>foldclose!<cr>", "Close all folds" },

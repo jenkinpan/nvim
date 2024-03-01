@@ -44,10 +44,6 @@ map("n", "<leader>b2", ":BufferLineGoToBuffer 2 <CR>", opts)
 map("n", "<leader>b3", ":BufferLineGoToBuffer 3 <CR>", opts)
 map("n", "<leader>b4", ":BufferLineGoToBuffer 4 <CR>", opts)
 map("n", "<leader>b5", ":BufferLineGoToBuffer 5 <CR>", opts)
-map("n", "<leader>b6", ":BufferLineGoToBuffer 6 <CR>", opts)
-map("n", "<leader>b7", ":BufferLineGoToBuffer 7 <CR>", opts)
-map("n", "<leader>b8", ":BufferLineGoToBuffer 8 <CR>", opts)
-map("n", "<leader>b9", ":BufferLineGoToBuffer 9 <CR>", opts)
 
 -- Navigate vim panes better
 map("n", "<c-k>", ":wincmd k<CR>", opts)
