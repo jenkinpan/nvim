@@ -60,7 +60,6 @@ return {
 			end,
 
 			-- tostring(os.time()) .. "-" ..
-			
 			---@param opts {path: string, label: string, id: string|?}
 			---@return string
 			wiki_link_func = function(opts)
@@ -117,7 +116,6 @@ return {
 			picker = {
 				name = "telescope.nvim",
 				mappings = {
-					new = "<C-x>",
 					insert_link = "<C-l>",
 				},
 			},

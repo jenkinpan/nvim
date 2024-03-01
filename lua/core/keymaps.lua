@@ -4,7 +4,7 @@ vim.g.maplocalleader = " " -- set <space> key as local leader key
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
--- KeyBind
+-- Keymaps
 -- Allow clipboard copy paste in neovim
 map("", "<C-v>", "+p<CR>", opts)
 map("!", "<C-v>", "<C-R>+", opts)
@@ -23,7 +23,7 @@ map("n", "<leader>n", ":noh <CR>", opts)
 -- Toggle Symbols Outline
 map("n", "<leader>so", ":SymbolsOutline <CR>", opts)
 
--- set keybind of folds
+-- set keymaps for folds
 map("n", "<leader>zc", ":foldclose <CR>", opts)
 map("n", "<leader>zo", ":foldopen <CR>", opts)
 
@@ -88,7 +88,7 @@ map("n", "<leader>cf", vim.lsp.buf.format, {}, "format code")
 -- set dismiss noice message
 map("n", "<leader>ds", ":NoiceDismiss <CR>", opts)
 
--- Git Stuffs
+-- Git Stuffs keymaps
 -- set get preview code with gitsigns
 map("n", "<leader>gp", ":Gitsigns preview_hunk <CR>", opts)
 -- open LazyGit
@@ -98,21 +98,21 @@ map("n", "<leader>gr", function()
 	require("telescope").extensions.lazygit.lazygit()
 end, opts)
 
--- set telescope key bind
+-- set telescope keymaps
 map("n", "<leader>fb", ":Telescope buffers <CR>", opts)
 map("n", "<leader>fh", ":Telescope help_tags <CR>", opts)
 map("n", "<leader>ff", ":Telescope find_files <CR>", opts)
 map("n", "<leader>fg", ":Telescope live_grep <CR>", opts)
 
--- debugging key bind
+-- debugging keymaps
 map("n", "<leader>dt", ":DapToggleBreakpoint <CR>", opts)
 map("n", "<leader>dc", ":Dapcontinue <CR>", opts)
 
--- UndoTree key bind
+-- UndoTree keymaps
 map("n", "<leader>ut", ":UndotreeToggle <CR>", opts)
 map("n", "<leader>uf", ":UndotreeFocus <CR>", opts)
 
--- Trouble key bind
+-- Trouble keymaps
 vim.keymap.set("n", "<leader>xx", function()
 	require("trouble").toggle()
 end) -- Toggle Trouble
@@ -131,3 +131,26 @@ end) -- Toggle Loclist Trouble
 vim.keymap.set("n", "gR", function()
 	require("trouble").toggle("lsp_references")
 end) -- Toggle LSP References
+
+-- Obsidian keymaps
+vim.keymap.set(
+	"n",
+	"<leader>oc",
+	"<cmd>lua require('obsidian').util.toggle_checkbox()<CR>",
+	opts,
+	{ desc = "Obsidian Check Checkbox" }
+)
+vim.keymap.set("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", opts, { desc = "Open in Obsidian App" })
+vim.keymap.set("n", "<leader>ob", "<cmd>ObsidianBacklinks<CR>", opts, { desc = "Show ObsidianBacklinks" })
+vim.keymap.set("n", "<leader>ol", "<cmd>ObsidianLinks<CR>", opts, { desc = "Show ObsidianLinks" })
+vim.keymap.set("n", "<leader>onn", "<cmd>ObsidianNew<CR>", opts, { desc = "Create New Note" })
+vim.keymap.set("n", "<leader>ont", "<cmd>ObsidianNewToday<CR>", opts, { desc = "Create New Today Note" })
+vim.keymap.set("n", "<leader>ony", "<cmd>ObsidianNewYesterday<CR>", opts, { desc = "Create New Yesterday Note" })
+vim.keymap.set("n", "<leader>onT", "<cmd>ObsidianNewTomorrow<CR>", opts, { desc = "Create New Tomorrow Note" })
+vim.keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<CR>", opts, { desc = "Search Obsidian" })
+vim.keymap.set("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", opts, { desc = "Quick Switch" })
+
+-- Zoxide keymaps
+map("n", "<leader>Z", function()
+	require("telescope").extensions.zoxide.list()
+end, opts)

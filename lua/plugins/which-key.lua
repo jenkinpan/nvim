@@ -50,6 +50,22 @@ return {
 				},
 				l = { "<cmd>Lazy<cr>", "Open Lazy" },
 				M = { "<cmd>Mason<cr>", "Open Mason" },
+				o = {
+					name = "Obsidian",
+					b = { "<cmd>ObsidianBacklinks<cr>", "Open Backlinks" },
+					c = { "<cmd>lua require('obsidian').util.toggle_checkbox()<cr>", "Toggle Checkbox" },
+					l = { "<cmd>ObsidianLinks<cr>", "Open Links" },
+					n = {
+						name = "New Note",
+						n = { "<cmd>ObsidianNew<cr>", "New Note" },
+						t = { "<cmd>ObsidianNewToday<cr>", "New Today Note" },
+						y = { "<cmd>ObsidianNewYesterday<cr>", "New Yesterday Note" },
+						T = { "<cmd>ObsidianNewTomorrow<cr>", "New Tomorrow Note" },
+					},
+					o = { "<cmd>Obsidian<cr>", "Open Obsidian" },
+					q = { "<cmd>ObsidianQuickSwitch<cr>", "Quick Switch" },
+					s = { "<cmd>ObsidianSearch<cr>", "Search Obsidian" },
+				},
 				s = {
 					name = "Symbols Outline",
 					o = { "<cmd>SymbolsOutline<cr>", "Toggle Symbols Outline" },
@@ -67,6 +83,10 @@ return {
 					d = { "<cmd>TroubleToggle lsp_document_diagnostics<cr>", "Document Diagnostics" },
 					q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
 					l = { "<cmd>TroubleToggle loclist<cr>", "Loclist" },
+				},
+				Z = {
+					"<cmd>lua require('telescope').extensions.zoxide.list()<cr>",
+					"Zoxide",
 				},
 				z = {
 					name = "Fold Commands",
