@@ -73,8 +73,6 @@ return {
 					folder_closed = "",
 					folder_open = "",
 					folder_empty = "󰜌",
-					-- The next two settings are only a fallback, if you use nvim-web-devicons and configure default icons there
-					-- then these will never be used.
 					default = "*",
 					highlight = "NeoTreeFileIcon",
 				},
@@ -123,8 +121,6 @@ return {
 					enabled = false,
 				},
 			},
-			-- A list of functions, each representing a global custom command
-			-- that will be available in all sources (if not overridden in `opts[source_name].commands`)
 			-- see `:h neo-tree-custom-commands-global`
 			commands = {},
 			window = {
