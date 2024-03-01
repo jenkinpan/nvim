@@ -84,14 +84,17 @@ map("n", "<leader>ca", vim.lsp.buf.code_action, {})
 -- set shortcut for format code
 map("n", "<leader>cf", vim.lsp.buf.format, {}, "format code")
 
+-- Open Codesnap preview for code sharing
+map("n", "<leader>cs", ":CodeSnapPreviewOn<CR>", opts, { desc = "Open Codesnap Preview" })
+
 -- set dismiss noice message
-map("n", "<leader>ds", ":NoiceDismiss <CR>", opts)
+map("n", "<leader>ds", ":NoiceDismiss<CR>", opts)
 
 -- Git Stuffs keymaps
 -- set get preview code with gitsigns
 map("n", "<leader>gp", ":Gitsigns preview_hunk <CR>", opts)
 -- open LazyGit
-map("n", "<leader>gg", ":LazyGit <CR>", opts)
+map("n", "<leader>gg", ":LazyGit<CR>", opts)
 -- open Telescope git repos
 map("n", "<leader>gr", function()
 	require("telescope").extensions.lazygit.lazygit()
