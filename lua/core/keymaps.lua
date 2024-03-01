@@ -1,4 +1,4 @@
-vim.g.mapleader = " "      -- set <space> key as leader key
+vim.g.mapleader = " " -- set <space> key as leader key
 vim.g.maplocalleader = " " -- set <space> key as local leader key
 
 local map = vim.keymap.set
@@ -26,10 +26,13 @@ map("n", "<leader>so", ":SymbolsOutline <CR>", opts)
 -- set keymaps for folds
 map("n", "<leader>zc", ":foldclose <CR>", opts)
 map("n", "<leader>zo", ":foldopen <CR>", opts)
+map("n", "<leader>za", ":foldopen! <CR>", opts)
+map("n", "<leader>zr", ":foldclose! <CR>", opts)
 
+vim.keymap.set("n", "zM", "<cmd>lua require('ufo').closeAllFolds()<CR>", opts)
 -- set KeyBind for BufferLine
-map("n", "<leader>bp", ":BufferLinePick <CR>", opts)        -- go to a specific buffer
-map("n", "<leader>bc", ":BufferLinePickClose <CR>", opts)   -- close a specific buffer
+map("n", "<leader>bp", ":BufferLinePick <CR>", opts) -- go to a specific buffer
+map("n", "<leader>bc", ":BufferLinePickClose <CR>", opts) -- close a specific buffer
 map("n", "<leader>bo", ":BufferLineCloseOthers <CR>", opts) -- close other buffers
 
 -- set choose buffer by cycle next

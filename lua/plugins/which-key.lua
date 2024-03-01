@@ -90,8 +90,10 @@ return {
 				},
 				z = {
 					name = "Fold Commands",
-					o = { "<cmd>foldopen<cr>", "Close fold" },
-					c = { "<cmd>foldclose<cr>", "Close fold" },
+					o = { "<cmd>foldopen<cr>", "Close current fold" },
+					c = { "<cmd>foldclose<cr>", "Close current fold" },
+					a = { "<cmd>foldopen!<cr>", "Open all folds" },
+					r = { "<cmd>foldclose!<cr>", "Close all folds" },
 				},
 			},
 		})
