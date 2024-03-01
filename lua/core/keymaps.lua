@@ -1,4 +1,4 @@
-vim.g.mapleader = " " -- set <space> key as leader key
+vim.g.mapleader = " "      -- set <space> key as leader key
 vim.g.maplocalleader = " " -- set <space> key as local leader key
 
 local map = vim.keymap.set
@@ -28,8 +28,8 @@ map("n", "<leader>zc", ":foldclose <CR>", opts)
 map("n", "<leader>zo", ":foldopen <CR>", opts)
 
 -- set KeyBind for BufferLine
-map("n", "<leader>bp", ":BufferLinePick <CR>", opts) -- go to a specific buffer
-map("n", "<leader>bc", ":BufferLinePickClose <CR>", opts) -- close a specific buffer
+map("n", "<leader>bp", ":BufferLinePick <CR>", opts)        -- go to a specific buffer
+map("n", "<leader>bc", ":BufferLinePickClose <CR>", opts)   -- close a specific buffer
 map("n", "<leader>bo", ":BufferLineCloseOthers <CR>", opts) -- close other buffers
 
 -- set choose buffer by cycle next
@@ -113,42 +113,42 @@ map("n", "<leader>ut", ":UndotreeToggle <CR>", opts)
 map("n", "<leader>uf", ":UndotreeFocus <CR>", opts)
 
 -- Trouble keymaps
-vim.keymap.set("n", "<leader>xx", function()
+map("n", "<leader>xx", function()
 	require("trouble").toggle()
 end) -- Toggle Trouble
-vim.keymap.set("n", "<leader>xw", function()
+map("n", "<leader>xw", function()
 	require("trouble").toggle("workspace_diagnostics")
 end) -- Toggle Workspace Trouble
-vim.keymap.set("n", "<leader>xd", function()
+map("n", "<leader>xd", function()
 	require("trouble").toggle("document_diagnostics")
 end) -- Toggle Document Trouble
-vim.keymap.set("n", "<leader>xq", function()
+map("n", "<leader>xq", function()
 	require("trouble").toggle("quickfix")
 end) -- Toggle Quickfix Trouble
-vim.keymap.set("n", "<leader>xl", function()
+map("n", "<leader>xl", function()
 	require("trouble").toggle("loclist")
 end) -- Toggle Loclist Trouble
-vim.keymap.set("n", "gR", function()
+map("n", "gR", function()
 	require("trouble").toggle("lsp_references")
 end) -- Toggle LSP References
 
 -- Obsidian keymaps
-vim.keymap.set(
+map(
 	"n",
 	"<leader>oc",
 	"<cmd>lua require('obsidian').util.toggle_checkbox()<CR>",
 	opts,
 	{ desc = "Obsidian Check Checkbox" }
 )
-vim.keymap.set("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", opts, { desc = "Open in Obsidian App" })
-vim.keymap.set("n", "<leader>ob", "<cmd>ObsidianBacklinks<CR>", opts, { desc = "Show ObsidianBacklinks" })
-vim.keymap.set("n", "<leader>ol", "<cmd>ObsidianLinks<CR>", opts, { desc = "Show ObsidianLinks" })
-vim.keymap.set("n", "<leader>onn", "<cmd>ObsidianNew<CR>", opts, { desc = "Create New Note" })
-vim.keymap.set("n", "<leader>ont", "<cmd>ObsidianNewToday<CR>", opts, { desc = "Create New Today Note" })
-vim.keymap.set("n", "<leader>ony", "<cmd>ObsidianNewYesterday<CR>", opts, { desc = "Create New Yesterday Note" })
-vim.keymap.set("n", "<leader>onT", "<cmd>ObsidianNewTomorrow<CR>", opts, { desc = "Create New Tomorrow Note" })
-vim.keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<CR>", opts, { desc = "Search Obsidian" })
-vim.keymap.set("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", opts, { desc = "Quick Switch" })
+map("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", opts, { desc = "Open in Obsidian App" })
+map("n", "<leader>ob", "<cmd>ObsidianBacklinks<CR>", opts, { desc = "Show ObsidianBacklinks" })
+map("n", "<leader>ol", "<cmd>ObsidianLinks<CR>", opts, { desc = "Show ObsidianLinks" })
+map("n", "<leader>onn", "<cmd>ObsidianNew<CR>", opts, { desc = "Create New Note" })
+map("n", "<leader>ont", "<cmd>ObsidianNewToday<CR>", opts, { desc = "Create New Today Note" })
+map("n", "<leader>ony", "<cmd>ObsidianNewYesterday<CR>", opts, { desc = "Create New Yesterday Note" })
+map("n", "<leader>onT", "<cmd>ObsidianNewTomorrow<CR>", opts, { desc = "Create New Tomorrow Note" })
+map("n", "<leader>os", "<cmd>ObsidianSearch<CR>", opts, { desc = "Search Obsidian" })
+map("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", opts, { desc = "Quick Switch" })
 
 -- Zoxide keymaps
 map("n", "<leader>Z", function()
