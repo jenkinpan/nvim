@@ -34,7 +34,7 @@ return {
 					name = "Code Actions",
 					a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
 					f = { vim.lsp.buf.format, "Code Format" },
-					s = {"<cmd>CodeSnapPreviewOn<cr>", "Open Code Snap Preview"},
+					s = { "<cmd>CodeSnapPreviewOn<cr>", "Open Code Snap Preview" },
 				},
 				d = {
 					name = "Debug",
@@ -68,7 +68,7 @@ return {
 						y = { "<cmd>ObsidianYesterday<cr>", "New Yesterday Note" },
 						T = { "<cmd>ObsidianTomorrow<cr>", "New Tomorrow Note" },
 					},
-					o = { "<cmd>Obsidian<cr>", "Open Obsidian" },
+					o = { "<cmd>ObsidianOpen<cr>", "Open Obsidian" },
 					q = { "<cmd>ObsidianQuickSwitch<cr>", "Quick Switch" },
 					s = { "<cmd>ObsidianSearch<cr>", "Search Obsidian" },
 				},
