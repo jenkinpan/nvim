@@ -25,5 +25,5 @@ opt.foldlevelstart = 99
 opt.foldenable = true
 opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
--- set conceallevel for markdown
+-- set conceallevel for markdown obsidian
 opt.conceallevel = 2
