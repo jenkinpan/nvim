@@ -64,9 +64,9 @@ return {
 					n = {
 						name = "New Note",
 						n = { "<cmd>ObsidianNew<cr>", "New Note" },
-						t = { "<cmd>ObsidianNewToday<cr>", "New Today Note" },
-						y = { "<cmd>ObsidianNewYesterday<cr>", "New Yesterday Note" },
-						T = { "<cmd>ObsidianNewTomorrow<cr>", "New Tomorrow Note" },
+						t = { "<cmd>ObsidianToday<cr>", "New Today Note" },
+						y = { "<cmd>ObsidianYesterday<cr>", "New Yesterday Note" },
+						T = { "<cmd>ObsidianTomorrow<cr>", "New Tomorrow Note" },
 					},
 					o = { "<cmd>Obsidian<cr>", "Open Obsidian" },
 					q = { "<cmd>ObsidianQuickSwitch<cr>", "Quick Switch" },
