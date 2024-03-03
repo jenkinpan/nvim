@@ -20,11 +20,6 @@ return {
 					},
 				},
 				["core.summary"] = {},
-				["core.journal"] = {
-					config = {
-						workspaces = "notes",
-					},
-				},
 				["core.qol.toc"] = {
 					config = {
 						close_after_use = true,
