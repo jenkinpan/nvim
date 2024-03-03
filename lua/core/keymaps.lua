@@ -1,4 +1,4 @@
-vim.g.mapleader = " "      -- set <space> key as leader key
+vim.g.mapleader = " " -- set <space> key as leader key
 vim.g.maplocalleader = "," -- set <space> key as local leader key
 
 local map = vim.keymap.set
@@ -31,8 +31,8 @@ map("n", "<leader>zr", ":foldclose! <CR>", opts)
 
 vim.keymap.set("n", "zM", "<cmd>lua require('ufo').closeAllFolds()<CR>", opts)
 -- set KeyBind for BufferLine
-map("n", "<leader>bp", ":BufferLinePick <CR>", opts)        -- go to a specific buffer
-map("n", "<leader>bc", ":BufferLinePickClose <CR>", opts)   -- close a specific buffer
+map("n", "<leader>bp", ":BufferLinePick <CR>", opts) -- go to a specific buffer
+map("n", "<leader>bc", ":BufferLinePickClose <CR>", opts) -- close a specific buffer
 map("n", "<leader>bo", ":BufferLineCloseOthers <CR>", opts) -- close other buffers
 
 -- set choose buffer by cycle next
@@ -156,3 +156,8 @@ map("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", opts, { desc = "Quick Swi
 map("n", "<leader>Z", function()
 	require("telescope").extensions.zoxide.list()
 end, opts)
+
+-- Neorg keymaps
+map("n", "<localleader>im", "<cmd>Neorg inject-metadata<CR>", opts, { desc = "[neorg] Inject Metadata" })
+map("n", "<localleader>u", "<cmd>Neorg update-metadata<CR>", opts, { desc = "[neorg] Update Metadata" })
+map("n", "<localleader>c", "<cmd>Neorg toc<CR>", opts, { desc = "[neorg] Table of Contents" })

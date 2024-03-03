@@ -103,6 +103,7 @@ return {
 				},
 			},
 			[","] = {
+				c = { "<cmd>Neorg toc<cr>", "[neorg] Table of Contents" },
 				t = {
 					name = "Todo Tasks",
 					a = {
@@ -138,6 +139,7 @@ return {
 				i = {
 					name = "Insert",
 					d = { "<cmd>lua require('neorg.core').tempus.insert-date()<cr>", "[neorg] Insert Date" },
+					m = { "<cmd>Neorg inject-metadata<cr>", "[neorg] Inject Metadata" },
 				},
 				l = {
 					name = "List",
@@ -160,6 +162,7 @@ return {
 					name = "New",
 					n = { "<cmd>lua require('neorg.core').dirman.new.note()<cr>", "[neorg] Create New Note" },
 				},
+				u = { "<cmd>Neorg update-metadata<cr>", "[neorg] Update Metadata" },
 			},
 		})
 	end,
