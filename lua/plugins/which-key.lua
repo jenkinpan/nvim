@@ -102,6 +102,65 @@ return {
 					r = { "<cmd>foldclose!<cr>", "Close all folds" },
 				},
 			},
+			[","] = {
+				t = {
+					name = "Todo Tasks",
+					a = {
+						"<cmd>lua require('neorg.core').qol.todo_items.todo.task_ambiguous()<cr>",
+						"[neorg] Mark as ambiguous",
+					},
+					c = {
+						"<cmd>lua require('neorg.core').qol.todo_items.todo.task_cancelled()<cr>",
+						"[neorg] Mark as cancelled",
+					},
+					d = { "<cmd>lua require('neorg.core').qol.todo_items.todo.task_done()<cr>", "[neorg] Mark as done" },
+					h = {
+						"<cmd>lua require('neorg.core').qol.todo_items.todo.task_on_hold()<cr>",
+						"[neorg] Mark as On Hold",
+					},
+					i = {
+						"<cmd>lua require('neorg.core').qol.todo_items.todo.task_important()<cr>",
+						"[neorg] Mark as Important",
+					},
+					p = {
+						"<cmd>lua require('neorg.core').qol.todo_items.todo.task_pending()<cr>",
+						"[neorg] Mark as pending",
+					},
+					r = {
+						"<cmd>lua require('neorg.core').qol.todo_items.todo.task_recurring()<cr>",
+						"[neorg] Mark as Recurring",
+					},
+					u = {
+						"<cmd>lua require('neorg.core').qol.todo_items.todo.task_undone()<cr>",
+						"[neorg] Mark as undone",
+					},
+				},
+				i = {
+					name = "Insert",
+					d = { "<cmd>lua require('neorg.core').tempus.insert-date()<cr>", "[neorg] Insert Date" },
+				},
+				l = {
+					name = "List",
+					i = {
+						"<cmd>lua require('neorg.core').pivot.invert-list-type()<cr>",
+						"[neorg] Invert (Un)ordered List",
+					},
+					t = {
+						"<cmd>lua require('neorg.core').pivot.toggle-list-type()<cr>",
+						"[neorg] Toggle (Un)ordered Type",
+					},
+				},
+				m = {
+					name = "Neorg Mode",
+					n = { "<cmd>Neorg mode norg<cr>", "[neorg] Enter Norg Mode" },
+					h = { "<cmd>Neorg mode traverse-heading<cr>", "[neorg] Heading Traversal Mode" },
+					l = { "<cmd>Neorg mode traverse-link<cr>", "[neorg] Enter Link Traversal Mode" },
+				},
+				n = {
+					name = "New",
+					n = { "<cmd>lua require('neorg.core').dirman.new.note()<cr>", "[neorg] Create New Note" },
+				},
+			},
 		})
 	end,
 }

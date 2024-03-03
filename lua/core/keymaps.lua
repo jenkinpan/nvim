@@ -1,5 +1,5 @@
 vim.g.mapleader = " "      -- set <space> key as leader key
-vim.g.maplocalleader = " " -- set <space> key as local leader key
+vim.g.maplocalleader = "," -- set <space> key as local leader key
 
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
