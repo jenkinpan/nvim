@@ -134,23 +134,23 @@ map("n", "gR", function()
 end) -- Toggle LSP References
 
 -- Obsidian keymaps
--- map(
--- 	"n",
--- 	"<leader>oc",
--- 	"<cmd>lua require('obsidian').util.toggle_checkbox()<CR>",
--- 	opts,
--- 	{ desc = "Obsidian Check Checkbox" }
--- )
--- map("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", opts, { desc = "Open in Obsidian App" })
--- map("n", "<leader>ob", "<cmd>ObsidianBacklinks<CR>", opts, { desc = "Show ObsidianBacklinks" })
--- map("n", "<leader>ol", "<cmd>ObsidianLinks<CR>", opts, { desc = "Show ObsidianLinks" })
--- map("n", "<leader>onn", "<cmd>ObsidianNew<CR>", opts, { desc = "Create New Note" })
--- map("n", "<leader>ont", "<cmd>ObsidianToday<CR>", opts, { desc = "Create New Today Note" })
--- map("n", "<leader>ony", "<cmd>ObsidianYesterday<CR>", opts, { desc = "Create New Yesterday Note" })
--- map("n", "<leader>onT", "<cmd>ObsidianTomorrow<CR>", opts, { desc = "Create New Tomorrow Note" })
--- map("n", "<leader>os", "<cmd>ObsidianSearch<CR>", opts, { desc = "Search Obsidian" })
--- map("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", opts, { desc = "Quick Switch" })
---
+map(
+	"n",
+	"<leader>oc",
+	"<cmd>lua require('obsidian').util.toggle_checkbox()<CR>",
+	opts,
+	{ desc = "Obsidian Check Checkbox" }
+)
+map("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", opts, { desc = "Open in Obsidian App" })
+map("n", "<leader>ob", "<cmd>ObsidianBacklinks<CR>", opts, { desc = "Show ObsidianBacklinks" })
+map("n", "<leader>ol", "<cmd>ObsidianLinks<CR>", opts, { desc = "Show ObsidianLinks" })
+map("n", "<leader>onn", "<cmd>ObsidianNew<CR>", opts, { desc = "Create New Note" })
+map("n", "<leader>ont", "<cmd>ObsidianToday<CR>", opts, { desc = "Create New Today Note" })
+map("n", "<leader>ony", "<cmd>ObsidianYesterday<CR>", opts, { desc = "Create New Yesterday Note" })
+map("n", "<leader>onT", "<cmd>ObsidianTomorrow<CR>", opts, { desc = "Create New Tomorrow Note" })
+map("n", "<leader>os", "<cmd>ObsidianSearch<CR>", opts, { desc = "Search Obsidian" })
+map("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", opts, { desc = "Quick Switch" })
+
 -- Zoxide keymaps
 map("n", "<leader>Z", function()
 	require("telescope").extensions.zoxide.list()
@@ -224,3 +224,6 @@ map(
 	opts,
 	{ desc = "[neorg] Mark as undone" }
 )
+
+map("n", "<localleader>ef", "<cmd>Neorg export to-file<CR>", opts, { desc = "[neorg] Export tofile" })
+map("n", "<localleader>ed", "<cmd>Neorg export directory<CR>", opts, { desc = "[neorg] Export to directory" })

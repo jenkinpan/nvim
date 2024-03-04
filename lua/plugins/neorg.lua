@@ -12,7 +12,11 @@ return {
 				["core.defaults"] = {}, -- Loads default behaviour
 				["core.concealer"] = {}, -- Adds pretty icons to your documents
 				["core.summary"] = {},
-				["core.export"] = {},
+				["core.export"] = {
+					config = {
+						export_dir = "/home/jenkin/Documents/markdown-export",
+					},
+				},
 				["core.dirman"] = { -- Manages Neorg workspaces
 					config = {
 						workspaces = {

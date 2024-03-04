@@ -56,22 +56,22 @@ return {
 				},
 				l = { "<cmd>Lazy<cr>", "Open Lazy" },
 				M = { "<cmd>Mason<cr>", "Open Mason" },
-				-- o = {
-				-- 	name = "Obsidian",
-				-- 	b = { "<cmd>ObsidianBacklinks<cr>", "Open Backlinks" },
-				-- 	c = { "<cmd>lua require('obsidian').util.toggle_checkbox()<cr>", "Toggle Checkbox" },
-				-- 	l = { "<cmd>ObsidianLinks<cr>", "Open Links" },
-				-- 	n = {
-				-- 		name = "New Note",
-				-- 		n = { "<cmd>ObsidianNew<cr>", "New Note" },
-				-- 		t = { "<cmd>ObsidianToday<cr>", "New Today Note" },
-				-- 		y = { "<cmd>ObsidianYesterday<cr>", "New Yesterday Note" },
-				-- 		T = { "<cmd>ObsidianTomorrow<cr>", "New Tomorrow Note" },
-				-- 	},
-				-- 	o = { "<cmd>ObsidianOpen<cr>", "Open Obsidian" },
-				-- 	q = { "<cmd>ObsidianQuickSwitch<cr>", "Quick Switch" },
-				-- 	s = { "<cmd>ObsidianSearch<cr>", "Search Obsidian" },
-				-- },
+				o = {
+					name = "Obsidian",
+					b = { "<cmd>ObsidianBacklinks<cr>", "Open Backlinks" },
+					c = { "<cmd>lua require('obsidian').util.toggle_checkbox()<cr>", "Toggle Checkbox" },
+					l = { "<cmd>ObsidianLinks<cr>", "Open Links" },
+					n = {
+						name = "New Note",
+						n = { "<cmd>ObsidianNew<cr>", "New Note" },
+						t = { "<cmd>ObsidianToday<cr>", "New Today Note" },
+						y = { "<cmd>ObsidianYesterday<cr>", "New Yesterday Note" },
+						T = { "<cmd>ObsidianTomorrow<cr>", "New Tomorrow Note" },
+					},
+					o = { "<cmd>ObsidianOpen<cr>", "Open Obsidian" },
+					q = { "<cmd>ObsidianQuickSwitch<cr>", "Quick Switch" },
+					s = { "<cmd>ObsidianSearch<cr>", "Search Obsidian" },
+				},
 				s = {
 					name = "Symbols Outline",
 					o = { "<cmd>SymbolsOutline<cr>", "Toggle Symbols Outline" },
@@ -104,6 +104,11 @@ return {
 			},
 			[","] = {
 				c = { "<cmd>Neorg toc<cr>", "[neorg] Table of Contents" },
+				e = {
+					name = "Export",
+					f = { "<cmd>Neorg export to-file<cr>", "[neorg] Export to file" },
+					d = { "<cmd>Neorg export directory<cr>", "[neorg] Export to directory" },
+				},
 				t = {
 					name = "Todo Tasks",
 					a = {
