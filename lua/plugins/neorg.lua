@@ -12,6 +12,7 @@ return {
 				["core.defaults"] = {}, -- Loads default behaviour
 				["core.concealer"] = {}, -- Adds pretty icons to your documents
 				["core.summary"] = {},
+				["core.ui"] = {},
 				["core.export"] = {
 					config = {
 						export_dir = "/home/jenkin/Documents/markdown-export",
@@ -33,6 +34,11 @@ return {
 				["core.qol.toc"] = {
 					config = {
 						close_after_use = true,
+					},
+				},
+				["core.presenter"] = {
+					config = {
+						zen_mode = "zen-mode",
 					},
 				},
 			},

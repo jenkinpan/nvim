@@ -23,6 +23,9 @@ map("n", "<leader>n", ":noh <CR>", opts)
 -- Toggle Symbols Outline
 map("n", "<leader>so", ":SymbolsOutline <CR>", opts)
 
+-- Zen Mode
+map("n", "<localleader>z", ":ZenMode <CR>", opts)
+
 -- set keymaps for folds
 map("n", "<leader>zc", ":foldclose <CR>", opts)
 map("n", "<leader>zo", ":foldopen <CR>", opts)

@@ -175,6 +175,7 @@ return {
 					n = { "<cmd>lua require('neorg.core').dirman.new.note()<cr>", "[neorg] Create New Note" },
 				},
 				u = { "<cmd>Neorg update-metadata<cr>", "[neorg] Update Metadata" },
+				z = {"<cmd>ZenMode<cr>", "Zen Mode"},
 			},
 		})
 	end,
