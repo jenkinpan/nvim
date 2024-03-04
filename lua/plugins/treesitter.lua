@@ -19,6 +19,8 @@ return {
 				"javascript",
 				"python",
 				"slint",
+				"norg",
+				"org",
 			},
 			auto_install = true,
 			highlight = { enalbe = true },

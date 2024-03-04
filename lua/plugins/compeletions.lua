@@ -48,6 +48,7 @@ return {
 				{ name = "copilot" }, -- Copilot AI
 				{ name = "path" }, -- file system paths
 				{ name = "luasnip" }, -- snippets
+				{ name = "neorg" }, -- set neorg completion source
 			}),
 			-- Enable pictogram icons for lsp/autocompletion
 			formatting = {
