@@ -1,7 +1,12 @@
 return {
-	"numToStr/Comment.nvim",
-	event = { "BufEnter" },
-	opts = {
-		-- add any options here
+	{
+		"numToStr/Comment.nvim",
+		event = { "BufEnter" },
+		opts = {},
+	},
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {},
 	},
 }

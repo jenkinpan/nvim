@@ -1,7 +1,9 @@
+-- TODO: I want to set image.nvim to only render images in terminal kitty not in neovide.
 if vim.g.neovide then
 	return {}
 else
 	return {
+		-- FIX: Wanna just use it in kitty. Other place doesn't load.
 		"3rd/image.nvim",
 		event = "BufReadPre",
 		config = function()

@@ -56,7 +56,6 @@ function _G.set_terminal_keymaps()
 	-- close terminal mode, enter normal mode
 	vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opt)
 	vim.keymap.set("t", "jk", [[<C-\><C-n>]], opt)
-
 	-- set window panes jumping
 	vim.keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opt)
 	vim.keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opt)
@@ -135,33 +134,93 @@ map("n", "gR", function()
 end) -- Toggle LSP References
 
 -- Obsidian keymaps
-map(
-	"n",
-	"<leader>oc",
-	"<cmd>lua require('obsidian').util.toggle_checkbox()<CR>",
-	opts,
-	{ desc = "Obsidian Check Checkbox" }
-)
-map("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", opts, { desc = "Open in Obsidian App" })
-map("n", "<leader>ob", "<cmd>ObsidianBacklinks<CR>", opts, { desc = "Show ObsidianBacklinks" })
-map("n", "<leader>ol", "<cmd>ObsidianLinks<CR>", opts, { desc = "Show ObsidianLinks" })
-map("n", "<leader>onn", "<cmd>ObsidianNew<CR>", opts, { desc = "Create New Note" })
-map("n", "<leader>ont", "<cmd>ObsidianToday<CR>", opts, { desc = "Create New Today Note" })
-map("n", "<leader>ony", "<cmd>ObsidianYesterday<CR>", opts, { desc = "Create New Yesterday Note" })
-map("n", "<leader>onT", "<cmd>ObsidianTomorrow<CR>", opts, { desc = "Create New Tomorrow Note" })
-map("n", "<leader>os", "<cmd>ObsidianSearch<CR>", opts, { desc = "Search Obsidian" })
-map("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", opts, { desc = "Quick Switch" })
-
+-- map(
+-- 	"n",
+-- 	"<leader>oc",
+-- 	"<cmd>lua require('obsidian').util.toggle_checkbox()<CR>",
+-- 	opts,
+-- 	{ desc = "Obsidian Check Checkbox" }
+-- )
+-- map("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", opts, { desc = "Open in Obsidian App" })
+-- map("n", "<leader>ob", "<cmd>ObsidianBacklinks<CR>", opts, { desc = "Show ObsidianBacklinks" })
+-- map("n", "<leader>ol", "<cmd>ObsidianLinks<CR>", opts, { desc = "Show ObsidianLinks" })
+-- map("n", "<leader>onn", "<cmd>ObsidianNew<CR>", opts, { desc = "Create New Note" })
+-- map("n", "<leader>ont", "<cmd>ObsidianToday<CR>", opts, { desc = "Create New Today Note" })
+-- map("n", "<leader>ony", "<cmd>ObsidianYesterday<CR>", opts, { desc = "Create New Yesterday Note" })
+-- map("n", "<leader>onT", "<cmd>ObsidianTomorrow<CR>", opts, { desc = "Create New Tomorrow Note" })
+-- map("n", "<leader>os", "<cmd>ObsidianSearch<CR>", opts, { desc = "Search Obsidian" })
+-- map("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", opts, { desc = "Quick Switch" })
+--
 -- Zoxide keymaps
 map("n", "<leader>Z", function()
 	require("telescope").extensions.zoxide.list()
 end, opts)
 
 -- Neorg keymaps
+-- metadata
 map("n", "<localleader>im", "<cmd>Neorg inject-metadata<CR>", opts, { desc = "[neorg] Inject Metadata" })
 map("n", "<localleader>u", "<cmd>Neorg update-metadata<CR>", opts, { desc = "[neorg] Update Metadata" })
+-- table of contents
 map("n", "<localleader>c", "<cmd>Neorg toc<CR>", opts, { desc = "[neorg] Table of Contents" })
+-- journal
 map("n", "<localleader>jt", "<cmd>Neorg journal today<CR>", opts, { desc = "[neorg] Journal Today" })
 map("n", "<localleader>jy", "<cmd>Neorg journal yesterday<CR>", opts, { desc = "[neorg] Journal Yesterday" })
 map("n", "<localleader>jT", "<cmd>Neorg journal tomorrow<CR>", opts, { desc = "[neorg] Journal Tomorrow" })
 map("n", "<localleader>jc", "<cmd>Neorg journal toc<CR>", opts, { desc = "[neorg] Journal Tbale of Contents" })
+-- todo tasks
+map(
+	"n",
+	"<localleader>ta",
+	"<cmd>lua require('neorg.core').qol.todo_items.todo.task_ambiguous()<CR>",
+	opts,
+	{ desc = "[neorg] Mark as ambiguous" }
+)
+map(
+	"n",
+	"<localleader>tc",
+	"<cmd>lua require('neorg.core').qol.todo_items.todo.task_cancelled()<CR>",
+	opts,
+	{ desc = "[neorg] Mark as cancelled" }
+)
+map(
+	"n",
+	"<localleader>td",
+	"<cmd>lua require('neorg.core').qol.todo_items.todo.task_done()<CR>",
+	opts,
+	{ desc = "[neorg] Mark as done" }
+)
+map(
+	"n",
+	"<localleader>th",
+	"<cmd>lua require('neorg.core').qol.todo_items.todo.task_on_hold()<CR>",
+	opts,
+	{ desc = "[neorg] Mark as on hold" }
+)
+map(
+	"n",
+	"<localleader>ti",
+	"<cmd>lua require('neorg.core').qol.todo_items.todo.task_important()<CR>",
+	opts,
+	{ desc = "[neorg] Mark as important" }
+)
+map(
+	"n",
+	"<localleader>tp",
+	"<cmd>lua require('neorg.core').qol.todo_items.todo.task_pending()<CR>",
+	opts,
+	{ desc = "[neorg] Mark as pending" }
+)
+map(
+	"n",
+	"<localleader>tr",
+	"<cmd>lua require('neorg.core').qol.todo_items.todo.task_recurring()<CR>",
+	opts,
+	{ desc = "[neorg] Mark as recurring" }
+)
+map(
+	"n",
+	"<localleader>tu",
+	"<cmd>lua require('neorg.core').qol.todo_items.todo.task_undone()<CR>",
+	opts,
+	{ desc = "[neorg] Mark as undone" }
+)
