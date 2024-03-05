@@ -5,6 +5,11 @@ local opt = vim.opt
 opt.relativenumber = true
 opt.number = true
 
+opt.splitbelow = true -- split below instead of above
+opt.splitright = true
+
+vim.opt.wrap = false
+
 opt.autoindent = true
 opt.tabstop = 4
 opt.shiftwidth = 4
@@ -14,8 +19,10 @@ opt.mouse = "a"
 opt.mousemoveevent = true
 opt.ignorecase = true
 opt.termguicolors = true
-opt.clipboard = "unnamed,unnamedplus"
+opt.clipboard = "unnamedplus"
 opt.cursorline = true
+opt.virtualedit = "block"
+-- opt.scrolloff = 999
 opt.signcolumn = "yes"
 
 -- set fold stuffs for plugin nvim-ufo

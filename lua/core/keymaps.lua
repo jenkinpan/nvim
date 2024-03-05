@@ -1,4 +1,4 @@
-vim.g.mapleader = " "      -- set <space> key as leader key
+vim.g.mapleader = " " -- set <space> key as leader key
 vim.g.maplocalleader = "," -- set <space> key as local leader key
 
 local map = vim.keymap.set
@@ -6,10 +6,10 @@ local opts = { noremap = true, silent = true }
 
 -- Keymaps
 -- Allow clipboard copy paste in neovim
-map("", "<C-v>", "+p<CR>", opts)
-map("!", "<C-v>", "<C-R>+", opts)
-map("t", "<C-v>", "<C-R>+", opts)
-map("v", "<C-v>", "<C-R>+", opts)
+-- map("", "<C-v>", "+p<CR>", opts)
+-- map("!", "<C-v>", "<C-R>+", opts)
+-- map("t", "<C-v>", "<C-R>+", opts)
+-- map("v", "<C-v>", "<C-R>+", opts)
 
 -- Open Lazy
 map("n", "<leader>l", ":Lazy <CR>", opts)
@@ -19,6 +19,9 @@ map("n", "<leader>M", ":Mason <CR>", opts)
 
 -- cancel highlight search result for /
 map("n", "<leader>n", ":noh <CR>", opts)
+
+-- set jk as <esc> in normal mode
+map({ "n", "v" }, "jk", "<esc>", opts)
 
 -- Toggle Symbols Outline
 map("n", "<leader>so", ":SymbolsOutline <CR>", opts)
@@ -34,8 +37,8 @@ map("n", "<leader>zr", ":foldclose! <CR>", opts)
 
 vim.keymap.set("n", "zM", "<cmd>lua require('ufo').closeAllFolds()<CR>", opts)
 -- set KeyBind for BufferLine
-map("n", "<leader>bp", ":BufferLinePick <CR>", opts)        -- go to a specific buffer
-map("n", "<leader>bc", ":BufferLinePickClose <CR>", opts)   -- close a specific buffer
+map("n", "<leader>bp", ":BufferLinePick <CR>", opts) -- go to a specific buffer
+map("n", "<leader>bc", ":BufferLinePickClose <CR>", opts) -- close a specific buffer
 map("n", "<leader>bo", ":BufferLineCloseOthers <CR>", opts) -- close other buffers
 
 -- set choose buffer by cycle next

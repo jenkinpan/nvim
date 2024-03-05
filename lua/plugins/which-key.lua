@@ -89,12 +89,12 @@ return {
 			[","] = {
 				c = { "<cmd>Neorg toc<cr>", "[neorg] Table of Contents" },
 				e = {
-					name = "Export",
+					name = "[neorg] Export",
 					f = { "<cmd>Neorg export to-file<cr>", "[neorg] Export to file" },
 					d = { "<cmd>Neorg export directory<cr>", "[neorg] Export to directory" },
 				},
 				t = {
-					name = "Todo Tasks",
+					name = "[neorg] Todo Tasks",
 					a = {
 						"<cmd>lua require('neorg.core').qol.todo_items.todo.task_ambiguous()<cr>",
 						"[neorg] Mark as ambiguous",
@@ -126,12 +126,12 @@ return {
 					},
 				},
 				i = {
-					name = "Insert",
+					name = "[neorg] Insert",
 					d = { "<cmd>lua require('neorg.core').tempus.insert-date()<cr>", "[neorg] Insert Date" },
 					m = { "<cmd>Neorg inject-metadata<cr>", "[neorg] Inject Metadata" },
 				},
 				j = {
-					name = "Journal",
+					name = "[neorg] Journal",
 					c = { "<cmd>Neorg journal toc<cr>", "[neorg] Journal Table of Contents" },
 					C = { "<cmd>Neorg journal custom<cr>", "[neorg] Create Journal" },
 					t = { "<cmd>Neorg journal today<cr>", "[neorg] New Today Journal" },
@@ -139,7 +139,7 @@ return {
 					T = { "<cmd>Neorg journal tomorrow<cr>", "[neorg] New Tomorrow Journal" },
 				},
 				l = {
-					name = "List",
+					name = "[neorg] List",
 					i = {
 						"<cmd>lua require('neorg.core').pivot.invert-list-type()<cr>",
 						"[neorg] Invert (Un)ordered List",
@@ -150,17 +150,17 @@ return {
 					},
 				},
 				m = {
-					name = "Neorg Mode",
+					name = "[neorg] Mode",
 					n = { "<cmd>Neorg mode norg<cr>", "[neorg] Enter Norg Mode" },
 					h = { "<cmd>Neorg mode traverse-heading<cr>", "[neorg] Heading Traversal Mode" },
 					l = { "<cmd>Neorg mode traverse-link<cr>", "[neorg] Enter Link Traversal Mode" },
 				},
 				n = {
-					name = "New",
+					name = "[neorg] New",
 					n = { "<cmd>lua require('neorg.core').dirman.new.note()<cr>", "[neorg] Create New Note" },
 				},
 				o = {
-					name = "[Obsidian]",
+					name = "Obsidian",
 					b = { "<cmd>ObsidianBacklinks<cr>", "Open Backlinks" },
 					c = { "<cmd>lua require('obsidian').util.toggle_checkbox()<cr>", "Toggle Checkbox" },
 					l = { "<cmd>ObsidianLinks<cr>", "Open Links" },
