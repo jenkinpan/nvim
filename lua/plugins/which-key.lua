@@ -133,6 +133,7 @@ return {
 				j = {
 					name = "Journal",
 					c = { "<cmd>Neorg journal toc<cr>", "[neorg] Journal Table of Contents" },
+					C = { "<cmd>Neorg journal custom<cr>", "[neorg] Create Journal" },
 					t = { "<cmd>Neorg journal today<cr>", "[neorg] New Today Journal" },
 					y = { "<cmd>Neorg journal yesterday<cr>", "[neorg] New Yesterday Journal" },
 					T = { "<cmd>Neorg journal tomorrow<cr>", "[neorg] New Tomorrow Journal" },

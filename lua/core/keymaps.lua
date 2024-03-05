@@ -169,7 +169,8 @@ map("n", "<localleader>c", "<cmd>Neorg toc<CR>", opts, { desc = "[neorg] Table o
 map("n", "<localleader>jt", "<cmd>Neorg journal today<CR>", opts, { desc = "[neorg] Journal Today" })
 map("n", "<localleader>jy", "<cmd>Neorg journal yesterday<CR>", opts, { desc = "[neorg] Journal Yesterday" })
 map("n", "<localleader>jT", "<cmd>Neorg journal tomorrow<CR>", opts, { desc = "[neorg] Journal Tomorrow" })
-map("n", "<localleader>jc", "<cmd>Neorg journal toc<CR>", opts, { desc = "[neorg] Journal Tbale of Contents" })
+map("n", "<localleader>jc", "<cmd>Neorg journal toc<CR>", opts, { desc = "[neorg] Journal Table of Contents" })
+map("n", "<localleader>jC", "<cmd>Neorg journal custom<CR>", opts, { desc = "[neorg] New Journal Custom" })
 -- todo tasks
 map(
 	"n",
@@ -228,5 +229,6 @@ map(
 	{ desc = "[neorg] Mark as undone" }
 )
 
+-- Export markdown file
 map("n", "<localleader>ef", "<cmd>Neorg export to-file<CR>", opts, { desc = "[neorg] Export tofile" })
 map("n", "<localleader>ed", "<cmd>Neorg export directory<CR>", opts, { desc = "[neorg] Export to directory" })
