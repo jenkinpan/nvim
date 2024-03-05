@@ -20,9 +20,6 @@ map("n", "<leader>M", ":Mason <CR>", opts)
 -- cancel highlight search result for /
 map("n", "<leader>n", ":noh <CR>", opts)
 
--- set jk as <esc> in normal mode
-map({ "n", "v" }, "jk", "<esc>", opts)
-
 -- Toggle Symbols Outline
 map("n", "<leader>so", ":SymbolsOutline <CR>", opts)
 
