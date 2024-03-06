@@ -27,10 +27,10 @@ map("n", "<leader>so", ":SymbolsOutline <CR>", opts)
 map("n", "<localleader>z", ":ZenMode <CR>", opts)
 
 -- set keymaps for folds
-map("n", "<leader>zc", ":foldclose <CR>", opts)
-map("n", "<leader>zo", ":foldopen <CR>", opts)
-map("n", "<leader>za", ":foldopen! <CR>", opts)
-map("n", "<leader>zr", ":foldclose! <CR>", opts)
+-- map("n", "<leader>zc", ":foldclose <CR>", opts)
+-- map("n", "<leader>zo", ":foldopen <CR>", opts)
+-- map("n", "<leader>za", ":foldopen! <CR>", opts)
+-- map("n", "<leader>zr", ":foldclose! <CR>", opts)
 
 vim.keymap.set("n", "zM", "<cmd>lua require('ufo').closeAllFolds()<CR>", opts)
 -- set KeyBind for BufferLine

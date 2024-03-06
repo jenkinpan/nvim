@@ -78,13 +78,6 @@ return {
 					"<cmd>lua require('telescope').extensions.zoxide.list()<cr>",
 					"Zoxide",
 				},
-				z = {
-					name = "Fold Commands",
-					o = { "<cmd>foldopen<cr>", "Open current fold" },
-					c = { "<cmd>foldclose<cr>", "Close current fold" },
-					a = { "<cmd>foldopen!<cr>", "Open all folds" },
-					r = { "<cmd>foldclose!<cr>", "Close all folds" },
-				},
 			},
 			[","] = {
 				c = { "<cmd>Neorg toc<cr>", "[neorg] Table of Contents" },
