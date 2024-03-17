@@ -29,7 +29,6 @@ return {
 				"lua_ls",
 				"grammarly",
 				"slint_lsp",
-				"clangd",
 			},
 			auto_install = true,
 		},
@@ -78,10 +77,6 @@ return {
 			})
 
 			lspconfig.rust_analyzer.setup({
-				capabilities = capabilities,
-			})
-
-			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
 		end,
