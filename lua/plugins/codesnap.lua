@@ -1,15 +1,16 @@
 return {
 	"mistricky/codesnap.nvim",
 	build = "make",
+	version = "^1",
 	event = "VeryLazy",
 	config = function()
 		require("codesnap").setup({
 			mac_window_bar = true,
-			opacity = true,
+			title = "Codesnap.nvim",
 			watermark = "Code from Jenkin",
-			preview_title = "CodeSnap.nvim",
-			editor_font_family = "Hack",
+			code_font_family = "CaskaydiaCove Nerd Font",
 			watermark_font_family = "Pacifico",
+			save_path = "~/Pictures/codesnap.png",
 		})
 	end,
 }
