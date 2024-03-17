@@ -13,7 +13,6 @@ return {
 				-- Opt to list sources here, when available in mason.
 				"black",
 				"prettier",
-				"black",
 				"stylua",
 				"shfmt",
 			},

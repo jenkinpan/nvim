@@ -25,14 +25,12 @@ return {
 				"rust_analyzer",
 				"tsserver",
 				"volar",
-				"ast_grep",
 				"emmet_ls",
 				"lua_ls",
 				"grammarly",
 				"slint_lsp",
 				"clangd",
 			},
-
 			auto_install = true,
 		},
 	},
@@ -64,10 +62,6 @@ return {
 			})
 
 			lspconfig.emmet_ls.setup({
-				capabilities = capabilities,
-			})
-
-			lspconfig.ast_grep.setup({
 				capabilities = capabilities,
 			})
 
