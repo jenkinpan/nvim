@@ -45,7 +45,6 @@ return {
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" }, -- LSP source
 				{ name = "buffer" }, -- text with current buffer
-				{ name = "copilot" }, -- Copilot AI
 				{ name = "path" }, -- file system paths
 				{ name = "luasnip" }, -- snippets
 				{ name = "neorg" }, -- set neorg completion source
