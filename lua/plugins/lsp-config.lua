@@ -18,20 +18,22 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		lazy = false,
-		opts = {
-			ensure_installed = {
-				-- ensure_installed LSP servers
-				"eslint",
-				"rust_analyzer",
-				"tsserver",
-				"volar",
-				"emmet_ls",
-				"lua_ls",
-				"grammarly",
-				"slint_lsp",
-			},
-			auto_install = true,
-		},
+		config = function()
+			require("mason-lspconfig").setup({
+				ensure_installed = {
+					-- ensure_installed LSP servers
+					"eslint",
+					"rust_analyzer",
+					"tsserver",
+					"volar",
+					"emmet_ls",
+					"lua_ls",
+					"grammarly",
+					"slint_lsp",
+				},
+				auto_install = true,
+			})
+		end,
 	},
 	{
 		"neovim/nvim-lspconfig",

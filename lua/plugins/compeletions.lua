@@ -44,6 +44,7 @@ return {
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" }, -- LSP source
+				{ name = "copilot" },
 				{ name = "buffer" }, -- text with current buffer
 				{ name = "path" }, -- file system paths
 				{ name = "luasnip" }, -- snippets
