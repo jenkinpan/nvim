@@ -8,22 +8,29 @@ use Lazy to manage plugins
 ├── lua<br>
 │   ├── core<br>
 │   │   ├── keymaps.lua<br>
+│   │   ├── neovide.lua<br>
 │   │   └── options.lua<br>
 │   └── plugins<br>
-│   ├── colorscheme.lua<br>
-│   ├── comment.lua<br>
-│   ├── compeletions.lua<br>
-│   ├── copilot.lua<br>
-│   ├── debuggging.lua<br>
-│   ├── flash.lua<br>
-│   ├── git-stuff.lua<br>
-│   ├── lsp-config.lua<br>
-│   ├── neo-tree.lua<br>
-│   ├── none-ls.lua<br>
-│   ├── telescope.lua<br>
-│   ├── treesitter.lua<br>
-│   └── ui.lua<br>
-└── readme.md
+│       ├── codeium.lua<br>
+│       ├── codesnap.lua<br>
+│       ├── colorscheme.lua<br>
+│       ├── comment.lua<br>
+│       ├── compeletions.lua<br>
+│       ├── debuggging.lua<br>
+│       ├── flash.lua<br>
+│       ├── git-stuff.lua<br>
+│       ├── lsp-config.lua<br>
+│       ├── lspsaga.lua<br>
+│       ├── neorg.lua<br>
+│       ├── neo-tree.lua<br>
+│       ├── none-ls.lua<br>
+│       ├── telescope.lua<br>
+│       ├── treesitter.lua<br>
+│       ├── trouble.lua<br>
+│       ├── ui.lua<br>
+│       ├── undotree.lua<br>
+│       └── which-key.lua<br>
+└── readme.md<br>
 
 ## Installed Plugins
 
@@ -34,7 +41,8 @@ nvim-lspconfig<br>
 mason<br>
 null-ls<br>
 noice.nvim<br>
-nvim-ufo
+nvim-ufo<br>
+Lspsaga<br>
 
 ## KeyBinding
 
