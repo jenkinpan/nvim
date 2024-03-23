@@ -6,6 +6,11 @@ return {
 		"nvim-tree/nvim-web-devicons", -- optional
 	},
 	config = function()
-		require("lspsaga").setup({})
+		require("lspsaga").setup({
+			outline = {
+				auto_preview = false,
+				close_after_jump = true,
+			},
+		})
 	end,
 }

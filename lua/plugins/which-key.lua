@@ -18,7 +18,7 @@ return {
 
 		require("which-key").register({
 			["<leader>"] = {
-				["`"] = { "<cmd>ToggleTerm<cr>", "Toggle Terminal" },
+				["`"] = { "<cmd>Lspsaga term_toggle<cr>", "Toggle Terminal" },
 				b = {
 					name = "Buffers",
 					p = { "<cmd>BufferLinePick<cr>", "Pick buffer" },
@@ -54,12 +54,14 @@ return {
 					g = { "<cmd>LazyGit<cr>", "LazyGit" },
 					r = { "<cmd>lua require('telescope').extensions.lazygit.lazygit()<cr>", "Show historical Repos" },
 				},
-				l = { "<cmd>Lazy<cr>", "Open Lazy" },
-				M = { "<cmd>Mason<cr>", "Open Mason" },
-				s = {
-					name = "Symbols Outline",
-					o = { "<cmd>SymbolsOutline<cr>", "Toggle Symbols Outline" },
+				l = {
+					name = "Lspsaga",
+					o = { "<cmd>Lspsaga outline<cr>", "Open Outline" },
+					f = { "<cmd>Lspsaga finder<cr>", "Find References" },
+					r = { "<cmd>Lspsaga rename<cr>", "Rename" },
 				},
+				L = { "<cmd>Lazy<cr>", "Open Lazy" },
+				M = { "<cmd>Mason<cr>", "Open Mason" },
 				n = { "<cmd>noh<cr>", "Cancel highlight" },
 				u = {
 					name = "Undo Tree",

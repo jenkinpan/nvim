@@ -12,7 +12,7 @@ local opts = { noremap = true, silent = true }
 -- map("v", "<C-v>", "<C-R>+", opts)
 
 -- Open Lazy
-map("n", "<leader>l", ":Lazy <CR>", opts)
+map("n", "<leader>L", ":Lazy <CR>", opts)
 
 -- Open Mason
 map("n", "<leader>M", ":Mason <CR>", opts)
@@ -21,7 +21,7 @@ map("n", "<leader>M", ":Mason <CR>", opts)
 map("n", "<leader>n", ":noh <CR>", opts)
 
 -- Toggle Symbols Outline
-map("n", "<leader>so", ":SymbolsOutline <CR>", opts)
+map("n", "<leader>lo", "<cmd>Lspsaga outline<CR>", opts)
 
 -- Zen Mode
 map("n", "<localleader>z", ":ZenMode <CR>", opts)
@@ -48,26 +48,9 @@ map("n", "<c-j>", ":wincmd j<CR>", opts)
 map("n", "<c-h>", ":wincmd h<CR>", opts)
 map("n", "<c-l>", ":wincmd l<CR>", opts)
 
-function _G.set_terminal_keymaps()
-	local opt = { buffer = 0 }
-	-- close terminal mode, enter normal mode
-	vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opt)
-	vim.keymap.set("t", "jk", [[<C-\><C-n>]], opt)
-	-- set window panes jumping
-	vim.keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opt)
-	vim.keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opt)
-	vim.keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opt)
-	vim.keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opt)
-
-	vim.keymap.set("t", "<C-w>", [[<C-\><C-n><C-w>]], opt)
-end
-
-vim.cmd("autocmd! TermOpen term://*  lua set_terminal_keymaps()")
-
 -- set terminal toggle
-map("n", "<leader>`", ":ToggleTerm <CR>", opts)
-map("t", "<leader>`", [[<Cmd>ToggleTerm <CR>]], opts)
-
+map("n", "<leader>`", "<cmd>Lspsaga term_toggle<CR>", opts)
+map("t", "<leader>`", [[<cmd>Lspsaga term_toggle<CR>]], opts)
 -- set shortcut for Neotree
 map("n", "<C-n>", ":Neotree reveal <CR>", opts)
 map("n", "<C-g>", ":Neotree toggle git_status <CR>", opts)
