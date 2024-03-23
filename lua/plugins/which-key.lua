@@ -32,7 +32,7 @@ return {
 				},
 				c = {
 					name = "Code Actions",
-					a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+					a = { "<cmd>Lspsaga code_action<cr>", "Code Action" },
 					f = { vim.lsp.buf.format, "Code Format" },
 					s = { "<cmd>CodeSnapPreviewOn<cr>", "Open Code Snap Preview" },
 				},

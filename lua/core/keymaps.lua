@@ -73,9 +73,9 @@ map("n", "<C-n>", ":Neotree reveal <CR>", opts)
 map("n", "<C-g>", ":Neotree toggle git_status <CR>", opts)
 
 -- set shortcut for LSP
-map("n", "K", vim.lsp.buf.hover, {})
+map("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
 map("n", "gd", vim.lsp.buf.definition, {})
-map("n", "<leader>ca", vim.lsp.buf.code_action, {})
+map("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
 
 -- set shortcut for format code
 map("n", "<leader>cf", vim.lsp.buf.format, {}, "format code")
