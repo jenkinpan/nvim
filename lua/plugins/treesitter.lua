@@ -21,6 +21,7 @@ return {
 				"slint",
 				"norg",
 				"org",
+				"json",
 			},
 			auto_install = true,
 			highlight = { enalbe = true },
