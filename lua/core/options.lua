@@ -1,5 +1,7 @@
 vim.g.mapleader = " " -- set space as leader key
 
+vim.g.codeium_disable_bindings = 1	-- disable default bindings for codeium
+
 local opt = vim.opt
 
 opt.relativenumber = true

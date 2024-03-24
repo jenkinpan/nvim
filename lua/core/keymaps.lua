@@ -209,3 +209,17 @@ map(
 -- Export markdown file
 map("n", "<localleader>ef", "<cmd>Neorg export to-file<CR>", opts, { desc = "[neorg] Export tofile" })
 map("n", "<localleader>ed", "<cmd>Neorg export directory<CR>", opts, { desc = "[neorg] Export to directory" })
+
+-- Codeium keymaps
+vim.keymap.set("i", "<tab>", function()
+	return vim.fn["codeium#Accept"]()
+end, { expr = true, silent = true })
+vim.keymap.set("i", "<c-.>", function()
+	return vim.fn["codeium#CycleCompletions"](1)
+end, { expr = true, silent = true })
+vim.keymap.set("i", "<c-,>", function()
+	return vim.fn["codeium#CycleCompletions"](-1)
+end, { expr = true, silent = true })
+vim.keymap.set("i", "<c-x>", function()
+	return vim.fn["codeium#Clear"]()
+end, { expr = true, silent = true })
