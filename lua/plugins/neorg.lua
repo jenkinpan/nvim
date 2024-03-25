@@ -1,12 +1,11 @@
 return {
 	{
-		"vhyrro/luarocks.nvim",
-		priority = 1000,
-		config = true,
-	},
-	{
 		"nvim-neorg/neorg",
-		dependencies = { "luarocks.nvim" },
+		dependencies = { {
+			"vhyrro/luarocks.nvim",
+			priority = 1000,
+			config = true,
+		} },
 		lazy = true, -- enable lazy load
 		ft = "norg", -- lazy load on file type
 		cmd = "Neorg", -- lazy load on command
