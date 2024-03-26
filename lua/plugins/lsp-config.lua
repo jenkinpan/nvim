@@ -28,7 +28,7 @@ return {
 					"volar",
 					"emmet_ls",
 					"lua_ls",
-					"grammarly",
+					"markdown_oxide",
 					"slint_lsp",
 				},
 				auto_install = true,
@@ -66,7 +66,7 @@ return {
 				capabilities = capabilities,
 			})
 
-			lspconfig.grammarly.setup({
+			lspconfig.markdown_oxide.setup({
 				capabilities = capabilities,
 			})
 

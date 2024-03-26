@@ -11,25 +11,25 @@ use Lazy to manage plugins
 │   │   ├── neovide.lua<br>
 │   │   └── options.lua<br>
 │   └── plugins<br>
-│       ├── codeium.lua<br>
-│       ├── codesnap.lua<br>
-│       ├── colorscheme.lua<br>
-│       ├── comment.lua<br>
-│       ├── compeletions.lua<br>
-│       ├── debuggging.lua<br>
-│       ├── flash.lua<br>
-│       ├── git-stuff.lua<br>
-│       ├── lsp-config.lua<br>
-│       ├── lspsaga.lua<br>
-│       ├── neorg.lua<br>
-│       ├── neo-tree.lua<br>
-│       ├── none-ls.lua<br>
-│       ├── telescope.lua<br>
-│       ├── treesitter.lua<br>
-│       ├── trouble.lua<br>
-│       ├── ui.lua<br>
-│       ├── undotree.lua<br>
-│       └── which-key.lua<br>
+│   ├── codeium.lua<br>
+│   ├── codesnap.lua<br>
+│   ├── colorscheme.lua<br>
+│   ├── comment.lua<br>
+│   ├── compeletions.lua<br>
+│   ├── debuggging.lua<br>
+│   ├── flash.lua<br>
+│   ├── git-stuff.lua<br>
+│   ├── lsp-config.lua<br>
+│   ├── lspsaga.lua<br>
+│   ├── neorg.lua<br>
+│   ├── neo-tree.lua<br>
+│   ├── none-ls.lua<br>
+│   ├── telescope.lua<br>
+│   ├── treesitter.lua<br>
+│   ├── trouble.lua<br>
+│   ├── ui.lua<br>
+│   ├── undotree.lua<br>
+│   └── which-key.lua<br>
 └── readme.md<br>
 
 ## Installed Plugins
@@ -73,6 +73,7 @@ Lspsaga<br>
 `<leader>ff` - open file find
 `<leader>fg` - open live grep window
 `<leader>fb` - open find buffer window for current buffers```
+````
 
 ### KeyBind for Comment
 
@@ -85,7 +86,7 @@ Lspsaga<br>
 `[count]gbc` - Toggles the number of line given as a prefix-count using blockwise
 `gc[count]{motion}` - (Op-pending) Toggles the region using linewise comment
 `gb[count]{motion}` - (Op-pending) Toggles the region using blockwise comments
-````
+```
 
 ```help
 `gco` - Insert comment to the next line and enters INSERT mode
