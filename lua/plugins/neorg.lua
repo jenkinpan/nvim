@@ -16,6 +16,12 @@ return {
 					["core.concealer"] = {}, -- Adds pretty icons to your documents
 					["core.summary"] = {},
 					["core.ui"] = {},
+					["core.integrations.treesitter"] = {
+						config = {
+							configure_parsers = true,
+							install_parsers = true,
+						},
+					},
 					["core.export"] = {
 						config = {
 							export_dir = "/home/jenkin/Documents/markdown-export",
@@ -42,6 +48,11 @@ return {
 					["core.presenter"] = {
 						config = {
 							zen_mode = "zen-mode",
+						},
+					},
+					["core.esupports.metagen"] = {
+						config = {
+							update_date = true,
 						},
 					},
 				},
