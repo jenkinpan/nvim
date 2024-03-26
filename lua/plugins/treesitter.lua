@@ -20,11 +20,12 @@ return {
 				"python",
 				"slint",
 				"norg",
+				"norg_meta",
 				"org",
 				"json",
 			},
 			auto_install = true,
-			highlight = { enalbe = true },
+			highlight = { enable = true },
 			indent = { enable = true },
 		})
 	end,
