@@ -12,48 +12,48 @@ local opts = { noremap = true, silent = true }
 -- map("v", "<C-v>", "<C-R>+", opts)
 
 -- Open Lazy
-map("n", "<leader>L", ":Lazy <CR>", opts)
+map("n", "<leader>L", "<cmd>Lazy <CR>", opts)
 
 -- Open Mason
-map("n", "<leader>M", ":Mason <CR>", opts)
+map("n", "<leader>M", "<cmd>Mason <CR>", opts)
 
 -- cancel highlight search result for /
-map("n", "<leader>n", ":noh <CR>", opts)
+map("n", "<leader>n", "<cmd>noh <CR>", opts)
 
 -- Toggle Symbols Outline
 map("n", "<leader>lo", "<cmd>Lspsaga outline<CR>", opts)
 
 -- Zen Mode
-map("n", "<localleader>z", ":ZenMode <CR>", opts)
+map("n", "<localleader>z", "<cmd>ZenMode <CR>", opts)
 
 vim.keymap.set("n", "zM", "<cmd>lua require('ufo').closeAllFolds()<CR>", opts)
 -- set KeyBind for BufferLine
-map("n", "<leader>bp", ":BufferLinePick <CR>", opts) -- go to a specific buffer
-map("n", "<leader>bc", ":BufferLinePickClose <CR>", opts) -- close a specific buffer
-map("n", "<leader>bo", ":BufferLineCloseOthers <CR>", opts) -- close other buffers
+map("n", "<leader>bp", "<cmd>BufferLinePick <CR>", opts) -- go to a specific buffer
+map("n", "<leader>bc", "<cmd>BufferLinePickClose <CR>", opts) -- close a specific buffer
+map("n", "<leader>bo", "<cmd>BufferLineCloseOthers <CR>", opts) -- close other buffers
 
 -- set choose buffer by cycle next
-map("n", "<leader><tab>", ":BufferLineCycleNext <CR>", opts)
+map("n", "<leader><tab>", "<cmd>BufferLineCycleNext <CR>", opts)
 
 -- set choose buffer by number
-map("n", "<leader>b1", ":BufferLineGoToBuffer 1 <CR>", opts)
-map("n", "<leader>b2", ":BufferLineGoToBuffer 2 <CR>", opts)
-map("n", "<leader>b3", ":BufferLineGoToBuffer 3 <CR>", opts)
-map("n", "<leader>b4", ":BufferLineGoToBuffer 4 <CR>", opts)
-map("n", "<leader>b5", ":BufferLineGoToBuffer 5 <CR>", opts)
+map("n", "<leader>b1", "<cmd>BufferLineGoToBuffer 1 <CR>", opts)
+map("n", "<leader>b2", "<cmd>BufferLineGoToBuffer 2 <CR>", opts)
+map("n", "<leader>b3", "<cmd>BufferLineGoToBuffer 3 <CR>", opts)
+map("n", "<leader>b4", "<cmd>BufferLineGoToBuffer 4 <CR>", opts)
+map("n", "<leader>b5", "<cmd>BufferLineGoToBuffer 5 <CR>", opts)
 
 -- Navigate vim panes better
-map("n", "<c-k>", ":wincmd k<CR>", opts)
-map("n", "<c-j>", ":wincmd j<CR>", opts)
-map("n", "<c-h>", ":wincmd h<CR>", opts)
-map("n", "<c-l>", ":wincmd l<CR>", opts)
+map("n", "<c-k>", "<cmd>wincmd k<CR>", opts)
+map("n", "<c-j>", "<cmd>wincmd j<CR>", opts)
+map("n", "<c-h>", "<cmd>wincmd h<CR>", opts)
+map("n", "<c-l>", "<cmd>wincmd l<CR>", opts)
 
 -- set terminal toggle
 map("n", "<leader>`", "<cmd>Lspsaga term_toggle<CR>", opts)
 map("t", "<leader>`", [[<cmd>Lspsaga term_toggle<CR>]], opts)
 -- set shortcut for Neotree
-map("n", "<C-n>", ":Neotree reveal <CR>", opts)
-map("n", "<C-g>", ":Neotree toggle git_status <CR>", opts)
+map("n", "<C-n>", "<cmd>Neotree reveal <CR>", opts)
+map("n", "<C-g>", "<cmd>Neotree toggle git_status <CR>", opts)
 
 -- set shortcut for LSP
 map("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
@@ -64,34 +64,34 @@ map("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
 map("n", "<leader>cf", vim.lsp.buf.format, {}, "format code")
 
 -- Open Codesnap preview for code sharing
-map("n", "<leader>cs", ":CodeSnapPreviewOn<CR>", opts, { desc = "Open Codesnap Preview" })
+map("n", "<leader>cs", "<cmd>CodeSnapPreviewOn<CR>", opts, { desc = "Open Codesnap Preview" })
 
 -- set dismiss noice message
-map("n", "<leader>ds", ":NoiceDismiss<CR>", opts)
+map("n", "<leader>ds", "<cmd>NoiceDismiss<CR>", opts)
 
 -- Git Stuffs keymaps
 -- set get preview code with gitsigns
-map("n", "<leader>gp", ":Gitsigns preview_hunk <CR>", opts)
+map("n", "<leader>gp", "<cmd>Gitsigns preview_hunk <CR>", opts)
 -- open LazyGit
-map("n", "<leader>gg", ":LazyGit<CR>", opts)
+map("n", "<leader>gg", "<cmd>LazyGit<CR>", opts)
 -- open Telescope git repos
 map("n", "<leader>gr", function()
 	require("telescope").extensions.lazygit.lazygit()
 end, opts)
 
 -- set telescope keymaps
-map("n", "<leader>fb", ":Telescope buffers <CR>", opts)
-map("n", "<leader>fh", ":Telescope help_tags <CR>", opts)
-map("n", "<leader>ff", ":Telescope find_files <CR>", opts)
-map("n", "<leader>fg", ":Telescope live_grep <CR>", opts)
+map("n", "<leader>fb", "<cmd>Telescope buffers <CR>", opts)
+map("n", "<leader>fh", "<cmd>Telescope help_tags <CR>", opts)
+map("n", "<leader>ff", "<cmd>Telescope find_files <CR>", opts)
+map("n", "<leader>fg", "<cmd>Telescope live_grep <CR>", opts)
 
 -- debugging keymaps
-map("n", "<leader>dt", ":DapToggleBreakpoint <CR>", opts)
-map("n", "<leader>dc", ":Dapcontinue <CR>", opts)
+map("n", "<leader>dt", "<cmd>DapToggleBreakpoint <CR>", opts)
+map("n", "<leader>dc", "<cmd>Dapcontinue <CR>", opts)
 
 -- UndoTree keymaps
-map("n", "<leader>ut", ":UndotreeToggle <CR>", opts)
-map("n", "<leader>uf", ":UndotreeFocus <CR>", opts)
+map("n", "<leader>ut", "<cmd>UndotreeToggle <CR>", opts)
+map("n", "<leader>uf", "<cmd>UndotreeFocus <CR>", opts)
 
 -- Trouble keymaps
 map("n", "<leader>xx", function()
