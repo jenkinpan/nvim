@@ -62,7 +62,6 @@ Lspsaga<br>
 
 ```help
 `Ctrl+n` - open Neo-Tree on the left side
-`Ctrl+g` - open Neo-Tree git_status floating window
 ```
 
 ### KeyBind for Telescope

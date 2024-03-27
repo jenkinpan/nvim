@@ -8,7 +8,7 @@ return {
 			mac_window_bar = true,
 			title = "Codesnap.nvim",
 			watermark = "Code from Jenkin",
-			code_font_family = "CaskaydiaCove Nerd Font",
+			code_font_family = "Hack",
 			watermark_font_family = "Pacifico",
 			save_path = "~/Pictures/codesnap.png",
 		})
