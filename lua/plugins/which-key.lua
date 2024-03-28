@@ -33,10 +33,7 @@ return {
 				c = {
 					name = "Code Actions",
 					a = { "<cmd>Lspsaga code_action<cr>", "Code Action" },
-					f = {
-						"<cmd>lua require('conform').format({lsp_fallback = true,async = true,timeout_ms = 500,})<cr>",
-						"Code Format",
-					},
+					f = { vim.lsp.buf.format, "Code Format" },
 					s = { "<cmd>CodeSnapPreviewOn<cr>", "Open Code Snap Preview" },
 				},
 				d = {
