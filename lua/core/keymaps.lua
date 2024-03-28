@@ -61,7 +61,13 @@ map("n", "gd", vim.lsp.buf.definition, {})
 map("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
 
 -- set shortcut for format code
-map("n", "<leader>cf", vim.lsp.buf.format, {}, "format code")
+map(
+	"n",
+	"<leader>cf",
+	"<cmd>lua require('confrom').format({lsp_fallback = true,async = true,timeout_ms = 500,})<CR>",
+	{},
+	"format code"
+)
 
 -- Open Codesnap preview for code sharing
 map("n", "<leader>cs", "<cmd>CodeSnapPreviewOn<CR>", opts, { desc = "Open Codesnap Preview" })
