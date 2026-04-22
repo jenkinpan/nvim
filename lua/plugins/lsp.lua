@@ -1,6 +1,13 @@
+-- lua/plugins/lsp.lua
+
 local ok_lsp, lspconfig = pcall(require, "lspconfig")
 if not ok_lsp then
 	return
+end
+
+local ok_mason, mason = pcall(require, "mason")
+if ok_mason then
+	mason.setup({}) -- 防御性：即使 mason.lua 没先跑，这里也能补一刀
 end
 
 local ok_mason_lsp, mason_lspconfig = pcall(require, "mason-lspconfig")
@@ -25,38 +32,34 @@ local on_attach = function(_, bufnr)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
--- 如果以后加 nvim-cmp，可以在这里扩展 capabilities
+local ok_cmp_lsp, cmp_lsp = pcall(require, "cmp_nvim_lsp")
+if ok_cmp_lsp then
+	capabilities = cmp_lsp.default_capabilities(capabilities)
+end
 
--- 用 mason 安装这些 server
+-- mason-lspconfig：声明要安装哪些 server
 mason_lspconfig.setup({
-	ensure_installed = {
-		"lua_ls",
-		"pyright",
-		"tsserver",
-	},
+	ensure_installed = { "lua_ls", "pyright", "rust_analyzer", "tsserver" },
 	automatic_installation = true,
 })
 
--- 每个 server 通用配置
-mason_lspconfig.setup_handlers({
-	function(server_name)
-		lspconfig[server_name].setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
-		})
-	end,
+-- 不用 setup_handlers，自己 loop 一遍
+local servers = { "lua_ls", "pyright", "rust_analyzer", "tsserver" }
 
-	-- 针对 lua_ls 的特殊设置
-	["lua_ls"] = function()
-		lspconfig.lua_ls.setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
-			settings = {
-				Lua = {
-					diagnostics = { globals = { "vim" } },
-					workspace = { checkThirdParty = false },
-				},
+for _, server in ipairs(servers) do
+	local opts = {
+		on_attach = on_attach,
+		capabilities = capabilities,
+	}
+
+	if server == "lua_ls" then
+		opts.settings = {
+			Lua = {
+				diagnostics = { globals = { "vim" } },
+				workspace = { checkThirdParty = false },
 			},
-		})
-	end,
-})
+		}
+	end
+
+	lspconfig[server].setup(opts)
+end

@@ -12,13 +12,20 @@ local specs = {
 	{ src = gh("folke/noice.nvim"), name = "noice.nvim" },
 	{ src = gh("stevearc/conform.nvim"), name = "conform.nvim" },
 	{ src = gh("folke/which-key.nvim") },
+	{ src = gh("williamboman/mason-lspconfig.nvim") },
 	{ src = gh("mason-org/mason.nvim") },
 	{ src = gh("folke/trouble.nvim") },
 	{ src = gh("folke/snacks.nvim") },
 	{ src = gh("nvim-lualine/lualine.nvim") },
 	{ src = gh("neovim/nvim-lspconfig") },
-	{ src = gh("williamboman/mason-lspconfig.nvim") },
 	{ src = gh("nvimtools/none-ls.nvim"), name = "none-ls.nvim" },
+	{ src = gh("hrsh7th/nvim-cmp") },
+	{ src = gh("hrsh7th/cmp-nvim-lsp") },
+	{ src = gh("hrsh7th/cmp-buffer") },
+	{ src = gh("hrsh7th/cmp-path") },
+	{ src = gh("hrsh7th/cmp-cmdline") },
+	{ src = gh("L3MON4D3/LuaSnip") },
+	{ src = gh("saadparwaiz1/cmp_luasnip") },
 }
 
 pack.add(specs)
