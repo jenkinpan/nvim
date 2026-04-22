@@ -16,6 +16,9 @@ local specs = {
 	{ src = gh("folke/trouble.nvim") },
 	{ src = gh("folke/snacks.nvim") },
 	{ src = gh("nvim-lualine/lualine.nvim") },
+	{ src = gh("neovim/nvim-lspconfig") },
+	{ src = gh("williamboman/mason-lspconfig.nvim") },
+	{ src = gh("nvimtools/none-ls.nvim"), name = "none-ls.nvim" },
 }
 
 pack.add(specs)
