@@ -27,3 +27,5 @@ require("tokyonight").setup({
 		}
 	end,
 })
+
+vim.cmd.colorscheme("tokyonight")
