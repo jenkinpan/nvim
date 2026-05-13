@@ -3,5 +3,6 @@ if vim.loader then
 end
 
 require("core.option")
+require("core.autocmd")
 require("core.keymaps")
 require("core.pack")
