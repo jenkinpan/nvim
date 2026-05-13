@@ -13,9 +13,6 @@ local on_attach = function(_, bufnr)
 	map("n", "K", vim.lsp.buf.hover, "[LSP] Hover")
 	map("n", "<leader>rn", vim.lsp.buf.rename, "[LSP] Rename")
 	map("n", "<leader>ca", vim.lsp.buf.code_action, "[LSP] Code Action")
-	map("n", "<leader>fd", function()
-		vim.diagnostic.open_float(nil, { focus = false })
-	end, "[LSP] Line Diagnostics")
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
